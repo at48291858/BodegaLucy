@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using BDLUCY_CodeFirst_Crud.Models;
+using static BDLUCY_CodeFirst_Crud.Helper;
 
 namespace BDLUCY_CodeFirst_Crud.Controllers
 {
@@ -19,144 +20,81 @@ namespace BDLUCY_CodeFirst_Crud.Controllers
         }
 
         // GET: Subcategorias
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string buscar)
         {
-            var bdLucyContext = _context.Subcategorias.Include(s => s.categoria);
-            return View(await bdLucyContext.ToListAsync());
+            var subcategorias = from marca in _context.Subcategorias.Include(s => s.categoria)
+                                select marca;
+            if (!String.IsNullOrEmpty(buscar))
+            {
+                subcategorias = subcategorias.Where(s => s.Nombre_Subcategoria!.Contains(buscar) || s.categoria.Nombre_Categoria!.Contains(buscar));
+            }
+
+            return View(await subcategorias.ToListAsync());
         }
 
-        // GET: Subcategorias/Details/5
-        public async Task<IActionResult> Details(int? id)
+        [NoDirectAccess]
+        public async Task<IActionResult> AddOrEdit(int id = 0)
         {
-            if (id == null || _context.Subcategorias == null)
+            if (id == 0)
             {
-                return NotFound();
+                ViewData["Codigo_Categoria"] = new SelectList(_context.Categorias, "Codigo_Categoria", "Nombre_Categoria");
+                return View(new Subcategoria());
             }
-
-            var subcategoria = await _context.Subcategorias
-                .Include(s => s.categoria)
-                .FirstOrDefaultAsync(m => m.Codigo_Subcategoria == id);
-            if (subcategoria == null)
+            else
             {
-                return NotFound();
-            }
-
-            return View(subcategoria);
-        }
-
-        // GET: Subcategorias/Create
-        public IActionResult Create()
-        {
-            ViewData["Codigo_Categoria"] = new SelectList(_context.Categorias, "Codigo_Categoria", "Nombre_Categoria");
-            return View();
-        }
-
-        // POST: Subcategorias/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Codigo_Subcategoria,Codigo_Categoria,Nombre_Subcategoria,Descripcion_Subcategoria,Estado_Subcategoria")] Subcategoria subcategoria)
-        {
-            if (ModelState.IsValid)
-            {
-                _context.Add(subcategoria);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            ViewData["Codigo_Categoria"] = new SelectList(_context.Categorias, "Codigo_Categoria", "Nombre_Categoria", subcategoria.Codigo_Categoria);
-            return View(subcategoria);
-        }
-
-        // GET: Subcategorias/Edit/5
-        public async Task<IActionResult> Edit(int? id)
-        {
-            if (id == null || _context.Subcategorias == null)
-            {
-                return NotFound();
-            }
-
-            var subcategoria = await _context.Subcategorias.FindAsync(id);
-            if (subcategoria == null)
-            {
-                return NotFound();
-            }
-            ViewData["Codigo_Categoria"] = new SelectList(_context.Categorias, "Codigo_Categoria", "Nombre_Categoria", subcategoria.Codigo_Categoria);
-            return View(subcategoria);
-        }
-
-        // POST: Subcategorias/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Codigo_Subcategoria,Codigo_Categoria,Nombre_Subcategoria,Descripcion_Subcategoria,Estado_Subcategoria")] Subcategoria subcategoria)
-        {
-            if (id != subcategoria.Codigo_Subcategoria)
-            {
-                return NotFound();
-            }
-
-            if (ModelState.IsValid)
-            {
-                try
+                var subcategoria = await _context.Subcategorias.FindAsync(id);
+                if (subcategoria == null)
                 {
-                    _context.Update(subcategoria);
+                    return NotFound();
+                }
+                ViewData["Codigo_Categoria"] = new SelectList(_context.Categorias, "Codigo_Categoria", "Nombre_Categoria");
+                return View(subcategoria);
+            }
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> AddOrEdit(int id, [Bind("Codigo_Subcategoria,Codigo_Categoria,Nombre_Subcategoria,Descripcion_Subcategoria,Estado_Subcategoria")] Subcategoria subcategoria)
+        {
+            if (ModelState.IsValid)
+            {
+                //Insert
+                if (id == 0)
+                {
+                    _context.Add(subcategoria);
                     await _context.SaveChangesAsync();
                 }
-                catch (DbUpdateConcurrencyException)
+                //Update
+                else
                 {
-                    if (!SubcategoriaExists(subcategoria.Codigo_Subcategoria))
+                    try
                     {
-                        return NotFound();
+                        _context.Update(subcategoria);
+                        await _context.SaveChangesAsync();
                     }
-                    else
+                    catch (DbUpdateConcurrencyException)
                     {
-                        throw;
+                        if (!SubcategoriaExists(subcategoria.Codigo_Subcategoria))
+                        { return NotFound(); }
+                        else
+                        { throw; }
                     }
                 }
-                return RedirectToAction(nameof(Index));
+                ViewData["Codigo_Categoria"] = new SelectList(_context.Categorias, "Codigo_Categoria", "Nombre_Categoria");
+                return Json(new { isValid = true, html = Helper.RenderRazorViewToString(this, "_ViewAll", _context.Subcategorias.ToList()) });
             }
-            ViewData["Codigo_Categoria"] = new SelectList(_context.Categorias, "Codigo_Categoria", "Nombre_Categoria", subcategoria.Codigo_Categoria);
-            return View(subcategoria);
+            ViewData["Codigo_Categoria"] = new SelectList(_context.Categorias, "Codigo_Categoria", "Nombre_Categoria");
+            return Json(new { isValid = false, html = Helper.RenderRazorViewToString(this, "AddOrEdit", subcategoria) });
         }
 
-        // GET: Subcategorias/Delete/5
-        public async Task<IActionResult> Delete(int? id)
-        {
-            if (id == null || _context.Subcategorias == null)
-            {
-                return NotFound();
-            }
-
-            var subcategoria = await _context.Subcategorias
-                .Include(s => s.categoria)
-                .FirstOrDefaultAsync(m => m.Codigo_Subcategoria == id);
-            if (subcategoria == null)
-            {
-                return NotFound();
-            }
-
-            return View(subcategoria);
-        }
-
-        // POST: Subcategorias/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            if (_context.Subcategorias == null)
-            {
-                return Problem("Entity set 'BdLucyContext.Subcategorias'  is null.");
-            }
             var subcategoria = await _context.Subcategorias.FindAsync(id);
-            if (subcategoria != null)
-            {
-                _context.Subcategorias.Remove(subcategoria);
-            }
-            
+            _context.Subcategorias.Remove(subcategoria);
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            return Json(new { html = Helper.RenderRazorViewToString(this, "_ViewAll", _context.Subcategorias.ToList()) });
         }
 
         private bool SubcategoriaExists(int id)

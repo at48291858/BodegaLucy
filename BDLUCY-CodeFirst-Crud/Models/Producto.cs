@@ -28,7 +28,7 @@ namespace BDLUCY_CodeFirst_Crud.Models
         [Column(TypeName = "nvarchar(150)")]
         [MaxLength(150, ErrorMessage = "Solo se puede ingresar 150 caracteres")]
         public string? Descripcion_Producto { get; set; } = "";
-        [Column(TypeName = "nvarchar(80)")]
+        [Column(TypeName = "nvarchar(255)")]
         public string? NombreImage { get; set; } = "";
 
         [Column(TypeName = "nvarchar(80)")]

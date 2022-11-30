@@ -4,39 +4,53 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Details</h1>
+<body>
+    <div class="row mt-4 bg-white">
+        <div class="container mb-0 pt-0 pl-0 pr-0">
+            <div class="row mb-0 pt-0 pl-0 pr-0">
+                <h1 class="display-6">Detalles de Incidencia</h1>
+            </div>
+            <div>
+                <hr />
+                <table class="table table-bordered">
+                    <thead class="text-white" style="background-color:#fe9f8b;">
+                        <tr>
+                            <th>Datos</th>
+                            <th>Detalles</th>
+                        </tr>
+                    </thead>
 
-<div>
-    <h4>Incidencia</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Descripcion_Incidencia)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Descripcion_Incidencia)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Cantidad_Incidencia)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Cantidad_Incidencia)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Fecha_Incidencia)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Fecha_Incidencia)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.producto)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.producto.Codigo_De_Barra)
-        </dd>
-    </dl>
-</div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.Codigo_Incidencia">Edit</a> |
-    <a asp-action="Index">Back to List</a>
-</div>
+                    <tbody>
+                        <tr>
+                            <td>Codigo de Barra</td>
+                            <td>@Html.DisplayFor(model => model.producto.Codigo_De_Barra)</td>
+                        </tr>
+                        <tr>
+                            <td>Nombre de Producto</td>
+                            <td>@Html.DisplayFor(model => model.producto.Nombre_Producto)</td>
+                        </tr>
+                        <tr>
+                            <td>Descripción</td>
+                            <td>@Html.DisplayFor(model => model.Descripcion_Incidencia)</td>
+                        </tr>
+                        <tr>
+                            <td>Cantidad</td>
+                            <td>@Html.DisplayFor(model => model.Cantidad_Incidencia)</td>
+                        </tr>
+                        <tr>
+                            <td>Fecha</td>
+                            <td>@Html.DisplayFor(model => model.Fecha_Incidencia)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-6">
+                <a asp-action="Edit" asp-route-id="@Model?.Codigo_Incidencia" class="btn btn-info" style="background-color:#fd6041; border:none; color:#fff;">Editar</a>
+                <a class="btn btn-warning" asp-action="Index" style="background-color:#ffa834; border:none; color:#fff;">Volver</a>
+                <!--<a class="btn btn-info text-white" asp-action="ImprimirIncidencia" asp-route-id="@Model.Codigo_Incidencia">Imprimir</a>-->
+            </div>
+            <br />
+        </div>
+    </div>
+</body>
+

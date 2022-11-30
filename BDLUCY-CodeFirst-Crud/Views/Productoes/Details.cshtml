@@ -4,81 +4,78 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Details</h1>
+<body>
+    <div class="row mt-4 bg-white">
+        <div class="container pl-0 pr-0">
+            <br />
+            <div class="row mb-0 pt-0 pl-0 pr-0">
+                <h1 class="display-6">Detalles del Producto</h1>
+            </div>
+            <div>
+                <hr />
+                <table class="table table-bordered">
+                    <thead class="text-white" style="background-color:#fe9f8b;">
+                        <tr>
+                            <th>Datos</th>
+                            <th>Detalles</th>
+                        </tr>
+                    </thead>
 
-<div>
-    <h4>Producto</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Nombre_Producto)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Nombre_Producto)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Codigo_De_Barra)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Codigo_De_Barra)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Stock_Producto)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Stock_Producto)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Precio_Compra_Producto)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Precio_Compra_Producto)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Precio_Venta_Producto)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Precio_Venta_Producto)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Descripcion_Producto)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Descripcion_Producto)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.NombreImage)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.NombreImage)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Estado_Producto)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Estado_Producto)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.subcategoria)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.subcategoria.Nombre_Subcategoria)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.presentacion)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.presentacion.Nombre_Presentacion)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.marca)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.marca.Nombre_Marca)
-        </dd>
-    </dl>
-</div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.Codigo_Producto">Edit</a> |
-    <a asp-action="Index">Back to List</a>
-</div>
+                    <tbody>
+                        <tr>
+                            <td>Codigo de Barra</td>
+                            <td>@Html.DisplayFor(model => model.Codigo_De_Barra)</td>
+                        </tr>
+                        <tr>
+                            <td>Nombre de Producto</td>
+                            <td>@Html.DisplayFor(model => model.Nombre_Producto)</td>
+                        </tr>
+                        <tr>
+                            <td>Subcategaria</td>
+                            <td>@Html.DisplayFor(model => model.subcategoria.Nombre_Subcategoria)</td>
+                        </tr>
+                        <tr>
+                            <td>Presentación</td>
+                            <td>@Html.DisplayFor(model => model.presentacion.Nombre_Presentacion)</td>
+                        </tr>
+                        <tr>
+                            <td>Marca</td>
+                            <td>@Html.DisplayFor(model => model.marca.Nombre_Marca)</td>
+                        </tr>
+                        <tr>
+                            <td>Stock</td>
+                            <td>@Html.DisplayFor(model => model.Stock_Producto)</td>
+                        </tr>
+                        <tr>
+                            <td>Precio Compra</td>
+                            <td>@Html.DisplayFor(model => model.Precio_Compra_Producto)</td>
+                        </tr>
+                        <tr>
+                            <td>Precio Venta</td>
+                            <td>@Html.DisplayFor(model => model.Precio_Venta_Producto)</td>
+                        </tr>
+                        <tr>
+                            <td>Descripción</td>
+                            <td>@Html.DisplayFor(model => model.Descripcion_Producto)</td>
+                        </tr>
+                        <tr>
+                            <td>Imagen</td>
+                            <!--<td>@Html.DisplayFor(model => model.NombreImage)</td>-->
+                            <td><img decoding="async" src="@("~/image/"+Model.NombreImage)" asp-append-version="true" width="100px" height="100px" /></td>
+                        </tr>
+                        <tr>
+
+                            <td>Estado</td>
+                            <td>@Model.Estado_Producto</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div>
+                <a asp-action="Edit" asp-route-id="@Model?.Codigo_Producto" class="btn btn-primary">Editar</a>
+                <a asp-action="Index" class="btn btn-warning" style="background-color:#ffa834; border:none; color:#fff;">Volver</a>
+            </div>
+            <br />
+        </div>
+    </div>
+</body>

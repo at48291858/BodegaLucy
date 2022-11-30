@@ -19,10 +19,19 @@ namespace BDLUCY_CodeFirst_Crud.Controllers
         }
 
         // GET: Incidencias
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string producto, DateTime? fecha1, DateTime? fecha2)
         {
-            var bdLucyContext = _context.Incidencias.Include(i => i.producto);
-            return View(await bdLucyContext.ToListAsync());
+            var incidencias = from incidencia in _context.Incidencias.Include(i => i.producto)
+                              select incidencia;
+            if (!String.IsNullOrEmpty(producto) && !fecha1.HasValue && !fecha2.HasValue)
+            {
+                incidencias = incidencias.Where(i => i.producto.Codigo_De_Barra!.Contains(producto));
+            }
+            if (String.IsNullOrEmpty(producto) && fecha1.HasValue && fecha2.HasValue)
+            {
+                incidencias = incidencias.Where(i => i.Fecha_Incidencia >= fecha1 && i.Fecha_Incidencia <= fecha2);
+            }
+            return View(await incidencias.ToListAsync());
         }
 
         // GET: Incidencias/Details/5

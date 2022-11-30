@@ -1,0 +1,151 @@
+﻿<!DOCTYPE html>
+<!-- Designined by CodingLab | www.youtube.com/codinglabyt -->
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>Bodega Lucy</title>
+    <link rel="stylesheet" href="../../dist3/style.css">
+    <!-- Boxiocns CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="sidebar close">
+        <div class="logo-details">
+            <i class='bx bx-bold'></i>
+            <span class="logo_name">Bodega Lucy</span>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <a href="#">
+                    <i class='bx bx-grid-alt'></i>
+                    <span class="link_name">Dashboard</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">Dashboard</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-money'></i>
+                    <span class="link_name">Caja</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">Caja</a></li>
+                    <li><a href="#">Administrar Caja</a></li>
+                    <li><a href="#">Historial Caja</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="iocn-link">
+                    <a href="#">
+                        <i class='bx bx-cart'></i>
+                        <span class="link_name">Ventas</span>
+                    </a>
+                    <i class='bx bxs-chevron-down arrow'></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a class="link_name" href="#">Ventas</a></li>
+                    <li><a href="#">Clientes</a></li>
+                    <li><a href="#">Ofertas</a></li>
+                    <li><a href="#">Realizar Ventas</a></li>
+                    <li><a href="#">Reporte de Ventas</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="iocn-link">
+                    <a href="#">
+                        <i class='bx bx-shopping-bag'></i>
+                        <span class="link_name">Compras</span>
+                    </a>
+                    <i class='bx bxs-chevron-down arrow'></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a class="link_name" href="#">Compras</a></li>
+                    <li><a href="#">Distribuidores</a></li>
+                    <li><a href="#">Realizar Compras</a></li>
+                    <li><a href="#">Reporte de Compras</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="iocn-link">
+                    <a href="#">
+                        <i class='bx bx-box'></i>
+                        <span class="link_name">Almacen</span>
+                    </a>
+                    <i class='bx bxs-chevron-down arrow'></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a class="link_name" href="#">Almacen</a></li>
+                    <li><a asp-area="" asp-controller="Categorias" asp-action="Index">Categorias</a></li>
+                    <li><a asp-area="" asp-controller="Subcategorias" asp-action="Index">Subcategoria</a></li>
+                    <li><a asp-area="" asp-controller="Empresas" asp-action="Index">Empresas</a></li>
+                    <li><a asp-area="" asp-controller="Marcas" asp-action="Index">Marcas</a></li>
+                    <li><a asp-area="" asp-controller="Presentacions" asp-action="Index">Presentaciones</a></li>
+                    <li><a asp-area="" asp-controller="Productoes" asp-action="Index">Productos</a></li>
+                    <li><a asp-area="" asp-controller="Incidencias" asp-action="Index">Incidencias</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-user'></i>
+                    <span class="link_name">Usuarios</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">Usuarios</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-cog'></i>
+                    <span class="link_name">Setting</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">Setting</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="profile-details">
+                    <div class="profile-content">
+                        <img src="../../dist3/image/profile.jpg" alt="profileImg">
+                    </div>
+                    <div class="name-job">
+                        <div class="profile_name">Prem Shahi</div>
+                        <div class="job">Web Desginer</div>
+                    </div>
+                    <i class='bx bx-log-out'></i>
+                </div>
+            </li>
+        </ul>
+    </div>
+    
+    <section class="home-section">
+        <div class="home-content">
+            <i class='bx bx-menu'></i>
+            <span class="text"></span>
+        </div>
+        <div class="card-body">
+            @RenderBody()
+        </div>
+    
+        <div class="modal" tabindex="-1" role="dialog" id="form-modal">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title"></h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="../../dist3/script.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

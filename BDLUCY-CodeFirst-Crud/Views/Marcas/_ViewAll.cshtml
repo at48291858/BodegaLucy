@@ -1,0 +1,70 @@
+﻿@model IEnumerable<BDLUCY_CodeFirst_Crud.Models.Marca>
+
+<style>
+    .table-responsive {
+        max-height: 350px;
+        overflow: scroll;
+    }
+</style>
+<div class="row mt-4 bg-white">
+    <div class="container pl-0 pr-0">
+        <div class="row pt-0 pl-0 pr-0 ml-0 mr-0" style="background-color:#fe9f8b;">
+            <h1 class="display-6 text-white">Marcas</h1>
+        </div>
+        <div class="row mt-3 pl-0 pr-0">
+            <div class="col-md-9">
+                <form asp-controller="Marcas" asp-action="Index" class="d-flex">
+                    <div class="input-group mb-3">
+                        <input type="text" name="buscar" class="form-control" placeholder="Buscar" />
+                        <button class="btn btn-outline-dark" type="submit" value="Buscar" id="button-addon2">Buscar</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-3 d-md-flex justify-content-md-end">
+                <p>
+                    <a onclick="showInPopup('@Url.Action("AddOrEdit","Marcas",null,Context.Request.Scheme)','Nueva Marca')" class="btn btn-primary text-white"> Agregar Marca</a>
+                </p>
+            </div>
+        </div>
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover">
+                <thead class="text-white" style="background-color:#fe9f8b;">
+                    <tr>
+                        <th style="font-family:'Calibri';">Item</th>
+                        <th style="font-family:'Calibri';">Empresa</th>
+                        <th style="font-family:'Calibri';">Marca</th>
+                        <th style="font-family:'Calibri';">Descripcion</th>
+                        <th style="font-family:'Calibri';">Opciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @{
+                        int c = 0;
+                    }
+                    @foreach (var item in Model)
+                    {
+                        if (item.Codigo_Marca != null)
+                        {
+                            c++;
+                        }
+                        <tr>
+                            <td style="font-family:'Calibri';">@c</td>
+                            <td style="font-family:'Calibri';">@Html.DisplayFor(modelItem => item.empresa.Nombre_Empresa)</td>
+                            <td style="font-family:'Calibri';">@Html.DisplayFor(modelItem => item.Nombre_Marca)</td>
+                            <td style="font-family:'Calibri';">@Html.DisplayFor(modelItem => item.Descripcion_Marca)</td>
+                            <td>
+                                <div>
+                                    <a onclick="showInPopup('@Url.Action("AddOrEdit","Marcas",new {id=item.Codigo_Marca},Context.Request.Scheme)','Editar Marca')" class="btn btn-warning text-white">Editar</a>
+                                    <form asp-action="Delete" asp-route-id="@item.Codigo_Marca" onsubmit="return jQueryAjaxDelete(this)" class="d-inline">
+                                        <input type="hidden" asp-for="@item.Codigo_Marca" />
+                                        <input type="submit" value="Delete" class="btn btn-danger" />
+                                    </form>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
