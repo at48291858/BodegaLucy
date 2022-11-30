@@ -19,10 +19,24 @@ namespace BDLUCY_CodeFirst_Crud.Models
         public DbSet<Cliente> Clientes { get; set; }
         public DbSet<Usuario> Usuarios { get; set; }
         public DbSet<Paquete> Paquetes { get; set; }
-        public DbSet<Distribuidor> Distribuidors{ get; set; }
+        public DbSet<Distribuidor> Distribuidor{ get; set; }
         public DbSet<Compra> Compras { get; set; }
         public DbSet<Venta> Ventas { get; set; }
         public DbSet<Detalle_Venta> detalle_Ventas { get; set; }
         public DbSet<Detalle_Compra> Detalle_Compras { get; set; }
+
+
+        //---------------------PARA QUITARLE LA S A LAS TABLAS AL CREARLA------------------------------
+        protected override void OnModelCreating(ModelBuilder modelBuilder) 
+        {
+            modelBuilder.Entity<Usuario>().ToTable("Usuario");
+            modelBuilder.Entity<Paquete>().ToTable("Paquete");
+            modelBuilder.Entity<Distribuidor>().ToTable("Distribuidor");
+            modelBuilder.Entity<Compra>().ToTable("Compra");
+            modelBuilder.Entity<Detalle_Compra>().ToTable("Detalle_Compra");
+
+        }
+
+
     }
 }

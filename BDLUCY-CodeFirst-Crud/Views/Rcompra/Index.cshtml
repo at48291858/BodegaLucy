@@ -1,0 +1,77 @@
+﻿@model IEnumerable<BDLUCY_CodeFirst_Crud.Models.Compra>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Tipo_Comprobante)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Serie_Comprobante_Compra)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Numero_Comprobante_Compra)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IGV_Compra)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Subtotal_Compra)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Total_Compra)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.usuario)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.distribuidor)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tipo_Comprobante)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Serie_Comprobante_Compra)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Numero_Comprobante_Compra)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IGV_Compra)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Subtotal_Compra)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Total_Compra)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.usuario.Codigo_Usuario)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.distribuidor.Codigo_Distribuidor)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Codigo_Compra">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Codigo_Compra">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Codigo_Compra">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

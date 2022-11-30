@@ -7,6 +7,7 @@ namespace BDLUCY_CodeFirst_Crud.Models
     {
 
         [Key] //Atributo Clave
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Codigo_Detalle_Compra { get; set; }
         //----------------------------------------------
         public int Codigo_Compra { get; set; }          //ATRIBUTO RELACIONADO
@@ -23,10 +24,10 @@ namespace BDLUCY_CodeFirst_Crud.Models
         //ESTÁBLECEMOS LAS RELACIONES ENTRE CLASES
         //----------------------------------------------
         [ForeignKey("Codigo_Compra")]                  //ForeingKey
-        public Compra? compra { get; set; }
+        public virtual Compra compra { get; set; }
         //----------------------------------------------
         [ForeignKey("Codigo_Paquete")]             //ForeingKey
-        public Paquete? paquete { get; set; }
+        public virtual Paquete paquete { get; set; }
         //----------------------------------------------
     }
 }

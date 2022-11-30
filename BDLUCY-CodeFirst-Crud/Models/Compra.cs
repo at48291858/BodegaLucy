@@ -7,9 +7,8 @@ namespace BDLUCY_CodeFirst_Crud.Models
     public class Compra
     {
         [Key] //Atributo Clave
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Codigo_Compra { get; set; }
-        //----------------------------------------------
-        public DateTime Fecha_Compra { get; set; } = DateTime.Now;
         //----------------------------------------------
         [Column(TypeName = "nvarchar(10)")]
         public string Tipo_Comprobante { get; set; } = "";
@@ -34,15 +33,13 @@ namespace BDLUCY_CodeFirst_Crud.Models
         //ESTÁBLECEMOS LAS RELACIONES ENTRE CLASES
         //----------------------------------------------
         [ForeignKey("Codigo_Usuario")]                  //ForeingKey
-        public Usuario? usuario { get; set; }
+        public Usuario usuario { get; set; }
         //----------------------------------------------
         [ForeignKey("Codigo_Distribuidor")]             //ForeingKey
-        public Distribuidor? distribuidor { get; set; }
+        public Distribuidor distribuidor { get; set; }
 
         //---------------------------- NUEVO -------------------------------------
-        //---------------------------- NUEVO -------------------------------------
-        //---------------------------- NUEVO -------------------------------------
-        //public List<Detalle_Compra> Detalle_Compras { get; set; }
+        public virtual List<Detalle_Compra> Detalle_Compras { get; set; } = new List<Detalle_Compra>();  
         //----------------------------------------------
     }
 }

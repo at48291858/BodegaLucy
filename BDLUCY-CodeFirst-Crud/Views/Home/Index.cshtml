@@ -2,7 +2,191 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container-fluid">
+    <div class="row" >
+
+        <div class="col-9">
+            <h4>Paquetes</h4>
+            <hr />
+            <div class="card">
+                <div class="card-header">
+                    Detalle de la compra
+                </div>
+
+                <div class="card-body">
+                    <div class="row align-items-end">
+                        <div class="col-5">
+                                <label class="control-label">Código de paquete:</label>
+                                <input class="form-control" type="text" id="txtcodigopaquete" />
+                        </div>
+                        <div class="col-2">
+                                <label class="control-label">Precio: </label>
+                                <input class="form-control" type="number" id="txtprecio" />
+                        </div>
+                        <div class="col-2">
+                                <label class="control-label">Cantidad: </label>
+                                <input class="form-control" type="number" id="txtcantidad" />
+                        </div>
+                        <div class="col-3">
+                                <button class="btn btn-success" id="btnagregar">Agregar</button>
+
+                        </div>
+                        </div>
+                    </div>
+
+                </div>
+            
+            <hr />
+            <table class="table table-hover table-sm" id="tbpaquetes">
+                <thead>
+                    <tr class="table-dark">
+                        <th>Paquete</th>
+                        <th>Precio</th>
+                        <th>Cantidad</th>
+                        <th>Importe</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+
+
+        <div class="col-3">
+
+            <h4>Detalle de la compra</h4>
+            <hr />
+
+
+            <div class="card">
+                <div class="card-header">
+                    Detalle de la compra
+                </div>
+
+                <div class="card-body">
+                    <div class="row align-items-end">
+                        <label class="control-label">Fecha de compra: </label>
+                        <input class="form-control" type="datetime-local" id="txtfechacompra" />
+
+                        <label class="control-label">Tipo comprobante: </label>
+                        <input class="form-control" type="text" id="txttipocomprobante" />
+
+                        <label class="control-label">Serie comprobante: </label>
+                        <input class="form-control" type="text" id="txtserie" />
+
+                        <label class="control-label">Número comprobante: </label>
+                        <input class="form-control" type="text" id="txtnumero" />
+
+                        <label class="control-label">Código de usuario: </label>
+                        <input class="form-control" type="text" id="txtusuario" />
+
+
+                        <label class="control-label">Código distribuidor: </label>
+                        <input class="form-control" type="text" id="txtdistribuidor" />
+
+                        <label class="control-label">IGV: </label>
+                        <input class="form-control" type="number" id="txtigv" />
+
+                        <label class="control-label">Subtotal: </label>
+                        <input class="form-control" type="number" id="txtsubtotal" />
+
+                        <label class="control-label">Total: </label>
+                        <input class="form-control" type="number" id="txttotal" />
+
+
+                        <button class="btn btn-success" id="btnregistrar">Registrar compra</button>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
 </div>
+
+
+@section scripts{
+    <script>
+        $("#btnagregar").on("click", function () {
+            var total = parseFloat($("#txtprecio").val()) * parseFloat($("#txtcantidad").val())
+
+            $("#tbpaquetes tbody").append(
+                $("<tr>").append(
+                    $("<td>").text($("#txtcodigopaquete").val()),
+                    $("<td>").text($("#txtprecio").val()),
+                    $("<td>").text($("#txtcantidad").val()),
+                    $("<td>").text(total),
+                )
+
+            )
+            $("#txtcodigopaquete").val("")
+            $("#txtprecio").val("")
+            $("#txtcantidad").val("")
+            $("#txtcodigopaquete").focus();
+
+
+        })
+
+        $("#btnregistrar").on("click", function () {
+
+            var oDetalleCompra = []
+            var total=0;
+            var igv = 0;
+            var subtotal = 0;
+
+
+            $("#tbpaquetes > tbody > tr").each(function(i,tr){
+
+                oDetalleCompra.push(
+                    {
+                        Codigo_Paquete: $(tr).find('td:eq(0)').text(),
+                        Precio_Unitario: $(tr).find('td:eq(1)').text(),
+                        Cantidad: $(tr).find('td:eq(2)').text(),
+                        Importe_Detalle_Compra: $(tr).find('td:eq(3)').text()
+                    
+                    }
+
+                )
+                total = total + parseFloat($(tr).find('td:eq(3)').text())
+
+            })
+
+            igv = total * 0.18
+            subtotal = total - igv
+
+            var oCompraVM = {
+                oCompra : {
+                    Fecha_Compra: $("#txtfechacompra").val(),
+                    Tipo_Comprobante: $("#txttipocomprobante").val(),
+                    Serie_Comprobante_Compra: $("#txtserie").val(),
+                    Numero_Comprobante_Compra: $("#txtnumero").val(),
+                    Codigo_Usuario: $("#txtusuario").val(),
+                    Codigo_Distribuidor: $("#txtdistribuidor").val(),
+                    IGV_Compra: igv,
+                    Subtotal_Compra: subtotal,
+                    Total_Compra: total
+                },
+                oDetalle_compra: oDetalleCompra
+            }
+
+            jQuery.ajax({
+                url : '@Url.Action("Create","Compras")',
+                type :"POST",
+                data : JSON.stringify(oCompraVM),
+                datatype: "json",
+                contentType: "application/json; charset=utf-8",
+                success : function(data){
+                    
+                    if (data.respuesta)
+                    alert("Venta registrada")
+                    location.reload();
+                }
+            })
+
+        })
+
+    </script>
+        }

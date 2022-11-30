@@ -56,23 +56,18 @@ namespace BDLUCY_CodeFirst_Crud.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Codigo_Cliente"), 1L, 1);
 
                     b.Property<string>("Apellido_Materno_Cliente")
-                        .IsRequired()
                         .HasColumnType("nvarchar(20)");
 
                     b.Property<string>("Apellido_Paterno_Cliente")
-                        .IsRequired()
                         .HasColumnType("nvarchar(20)");
 
                     b.Property<string>("Documento_Cliente")
-                        .IsRequired()
                         .HasColumnType("nvarchar(13)");
 
                     b.Property<string>("Nombre_Cliente")
-                        .IsRequired()
                         .HasColumnType("nvarchar(25)");
 
                     b.Property<string>("Tipo_Documento_Cliente")
-                        .IsRequired()
                         .HasColumnType("nvarchar(3)");
 
                     b.HasKey("Codigo_Cliente");
@@ -94,25 +89,19 @@ namespace BDLUCY_CodeFirst_Crud.Migrations
                     b.Property<int>("Codigo_Usuario")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("Fecha_Compra")
-                        .HasColumnType("datetime2");
-
                     b.Property<float>("IGV_Compra")
                         .HasColumnType("real");
 
                     b.Property<string>("Numero_Comprobante_Compra")
-                        .IsRequired()
                         .HasColumnType("nvarchar(8)");
 
                     b.Property<string>("Serie_Comprobante_Compra")
-                        .IsRequired()
                         .HasColumnType("nvarchar(4)");
 
                     b.Property<float>("Subtotal_Compra")
                         .HasColumnType("real");
 
                     b.Property<string>("Tipo_Comprobante")
-                        .IsRequired()
                         .HasColumnType("nvarchar(10)");
 
                     b.Property<float>("Total_Compra")
@@ -124,7 +113,7 @@ namespace BDLUCY_CodeFirst_Crud.Migrations
 
                     b.HasIndex("Codigo_Usuario");
 
-                    b.ToTable("Compras");
+                    b.ToTable("Compra", (string)null);
                 });
 
             modelBuilder.Entity("BDLUCY_CodeFirst_Crud.Models.Detalle_Compra", b =>
@@ -156,7 +145,7 @@ namespace BDLUCY_CodeFirst_Crud.Migrations
 
                     b.HasIndex("Codigo_Paquete");
 
-                    b.ToTable("Detalle_Compras");
+                    b.ToTable("Detalle_Compra", (string)null);
                 });
 
             modelBuilder.Entity("BDLUCY_CodeFirst_Crud.Models.Detalle_Venta", b =>
@@ -200,35 +189,29 @@ namespace BDLUCY_CodeFirst_Crud.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Codigo_Distribuidor"), 1L, 1);
 
                     b.Property<string>("Direccion_Distribuidor")
-                        .IsRequired()
                         .HasColumnType("nvarchar(150)");
 
                     b.Property<bool>("Estado_Distribuidor")
                         .HasColumnType("bit");
 
                     b.Property<string>("Nombre_Contacto")
-                        .IsRequired()
                         .HasColumnType("nvarchar(70)");
 
                     b.Property<string>("RUC_Distribuidor")
-                        .IsRequired()
                         .HasColumnType("nvarchar(11)");
 
                     b.Property<string>("Razon_Social_Distribuidor")
-                        .IsRequired()
                         .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("Telefono_Contacto")
-                        .IsRequired()
                         .HasColumnType("nvarchar(70)");
 
                     b.Property<string>("Telefono_Distribuidor")
-                        .IsRequired()
                         .HasColumnType("nvarchar(9)");
 
                     b.HasKey("Codigo_Distribuidor");
 
-                    b.ToTable("Distribuidors");
+                    b.ToTable("Distribuidor", (string)null);
                 });
 
             modelBuilder.Entity("BDLUCY_CodeFirst_Crud.Models.Empresa", b =>
@@ -324,7 +307,6 @@ namespace BDLUCY_CodeFirst_Crud.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Descripcion_Oferta")
-                        .IsRequired()
                         .HasColumnType("nvarchar(100)");
 
                     b.Property<float>("Descuento_Oferta")
@@ -355,20 +337,17 @@ namespace BDLUCY_CodeFirst_Crud.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Contenido_Por_Unidad")
-                        .IsRequired()
                         .HasColumnType("nvarchar(10)");
 
                     b.Property<string>("Descripcion_Paquete")
-                        .IsRequired()
                         .HasColumnType("nvarchar(70)");
 
                     b.Property<string>("Nombre_Paquete")
-                        .IsRequired()
                         .HasColumnType("nvarchar(50)");
 
                     b.HasKey("Codigo_Paquete");
 
-                    b.ToTable("Paquetes");
+                    b.ToTable("Paquete", (string)null);
                 });
 
             modelBuilder.Entity("BDLUCY_CodeFirst_Crud.Models.Presentacion", b =>
@@ -488,55 +467,44 @@ namespace BDLUCY_CodeFirst_Crud.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Codigo_Usuario"), 1L, 1);
 
                     b.Property<string>("Apellido_Materno_Usuario")
-                        .IsRequired()
                         .HasColumnType("nvarchar(15)");
 
                     b.Property<string>("Apellido_Paterno_Usuario")
-                        .IsRequired()
                         .HasColumnType("nvarchar(15)");
 
                     b.Property<string>("Correo_Usuario")
-                        .IsRequired()
                         .HasColumnType("nvarchar(30)");
 
                     b.Property<string>("DNI_Usuario")
-                        .IsRequired()
                         .HasColumnType("nvarchar(8)");
 
                     b.Property<string>("Direccion_Usuario")
-                        .IsRequired()
                         .HasColumnType("nvarchar(150)");
 
                     b.Property<bool>("Estado_Usuario")
                         .HasColumnType("bit");
 
                     b.Property<string>("Nombre_Usuario")
-                        .IsRequired()
                         .HasColumnType("nvarchar(25)");
 
                     b.Property<string>("Pregunta_Secreta")
-                        .IsRequired()
                         .HasColumnType("nvarchar(30)");
 
                     b.Property<string>("Respuesta_Secreta")
-                        .IsRequired()
                         .HasColumnType("nvarchar(20)");
 
                     b.Property<string>("Telefono_Usuario")
-                        .IsRequired()
                         .HasColumnType("nvarchar(9)");
 
                     b.Property<string>("User_Usuario")
-                        .IsRequired()
                         .HasColumnType("nvarchar(20)");
 
                     b.Property<string>("clave_Usuario")
-                        .IsRequired()
                         .HasColumnType("nvarchar(20)");
 
                     b.HasKey("Codigo_Usuario");
 
-                    b.ToTable("Usuarios");
+                    b.ToTable("Usuario", (string)null);
                 });
 
             modelBuilder.Entity("BDLUCY_CodeFirst_Crud.Models.Venta", b =>
@@ -569,11 +537,9 @@ namespace BDLUCY_CodeFirst_Crud.Migrations
                         .HasColumnType("real");
 
                     b.Property<string>("Numero_Comprobante")
-                        .IsRequired()
                         .HasColumnType("nvarchar(20)");
 
                     b.Property<string>("Serie_Comprobante_Venta")
-                        .IsRequired()
                         .HasColumnType("nvarchar(4)");
 
                     b.Property<float>("Subtotal_Venta")
@@ -594,13 +560,13 @@ namespace BDLUCY_CodeFirst_Crud.Migrations
             modelBuilder.Entity("BDLUCY_CodeFirst_Crud.Models.Compra", b =>
                 {
                     b.HasOne("BDLUCY_CodeFirst_Crud.Models.Distribuidor", "distribuidor")
-                        .WithMany()
+                        .WithMany("Compras")
                         .HasForeignKey("Codigo_Distribuidor")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("BDLUCY_CodeFirst_Crud.Models.Usuario", "usuario")
-                        .WithMany()
+                        .WithMany("Compras")
                         .HasForeignKey("Codigo_Usuario")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -613,13 +579,13 @@ namespace BDLUCY_CodeFirst_Crud.Migrations
             modelBuilder.Entity("BDLUCY_CodeFirst_Crud.Models.Detalle_Compra", b =>
                 {
                     b.HasOne("BDLUCY_CodeFirst_Crud.Models.Compra", "compra")
-                        .WithMany()
+                        .WithMany("Detalle_Compras")
                         .HasForeignKey("Codigo_Compra")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("BDLUCY_CodeFirst_Crud.Models.Paquete", "paquete")
-                        .WithMany()
+                        .WithMany("Detalle_Compras")
                         .HasForeignKey("Codigo_Paquete")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -736,6 +702,26 @@ namespace BDLUCY_CodeFirst_Crud.Migrations
                     b.Navigation("cliente");
 
                     b.Navigation("usuario");
+                });
+
+            modelBuilder.Entity("BDLUCY_CodeFirst_Crud.Models.Compra", b =>
+                {
+                    b.Navigation("Detalle_Compras");
+                });
+
+            modelBuilder.Entity("BDLUCY_CodeFirst_Crud.Models.Distribuidor", b =>
+                {
+                    b.Navigation("Compras");
+                });
+
+            modelBuilder.Entity("BDLUCY_CodeFirst_Crud.Models.Paquete", b =>
+                {
+                    b.Navigation("Detalle_Compras");
+                });
+
+            modelBuilder.Entity("BDLUCY_CodeFirst_Crud.Models.Usuario", b =>
+                {
+                    b.Navigation("Compras");
                 });
 #pragma warning restore 612, 618
         }

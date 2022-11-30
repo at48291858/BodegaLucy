@@ -7,6 +7,7 @@ namespace BDLUCY_CodeFirst_Crud.Models
     public class Usuario
     {
         [Key] //Atributo Clave
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Codigo_Usuario { get; set; }
         //----------------------------------------------
         [Column(TypeName = "nvarchar(8)")]
@@ -43,5 +44,9 @@ namespace BDLUCY_CodeFirst_Crud.Models
         public string Respuesta_Secreta { get; set; } = "";
         //----------------------------------------------
         public bool Estado_Usuario { get; set; }
+
+        //---------------------- NUEVO CÓDIGO ----------------------
+        public IEnumerable<Compra> Compras { get; set; }
+
     }
 }

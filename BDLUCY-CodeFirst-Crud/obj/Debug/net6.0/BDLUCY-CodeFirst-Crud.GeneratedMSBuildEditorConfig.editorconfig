@@ -15,6 +15,26 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Git\BDLUCY-CodeFirst-Crudv2\BDLUCY-CodeFirst-Crud
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Git/BDLUCY-CodeFirst-Crudv2/BDLUCY-CodeFirst-Crud/Views/Distribuidors/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGlzdHJpYnVpZG9yc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Git/BDLUCY-CodeFirst-Crudv2/BDLUCY-CodeFirst-Crud/Views/Distribuidors/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGlzdHJpYnVpZG9yc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Git/BDLUCY-CodeFirst-Crudv2/BDLUCY-CodeFirst-Crud/Views/Distribuidors/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGlzdHJpYnVpZG9yc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Git/BDLUCY-CodeFirst-Crudv2/BDLUCY-CodeFirst-Crud/Views/Distribuidors/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGlzdHJpYnVpZG9yc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Git/BDLUCY-CodeFirst-Crudv2/BDLUCY-CodeFirst-Crud/Views/Distribuidors/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGlzdHJpYnVpZG9yc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Git/BDLUCY-CodeFirst-Crudv2/BDLUCY-CodeFirst-Crud/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -23,44 +43,32 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Git/BDLUCY-CodeFirst-Crudv2/BDLUCY-CodeFirst-Crud/Views/Incidencias/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5jaWRlbmNpYXNcQ3JlYXRlLmNzaHRtbA==
+[C:/Git/BDLUCY-CodeFirst-Crudv2/BDLUCY-CodeFirst-Crud/Views/Paquetes/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFxdWV0ZXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Git/BDLUCY-CodeFirst-Crudv2/BDLUCY-CodeFirst-Crud/Views/Incidencias/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5jaWRlbmNpYXNcRGVsZXRlLmNzaHRtbA==
+[C:/Git/BDLUCY-CodeFirst-Crudv2/BDLUCY-CodeFirst-Crud/Views/Paquetes/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFxdWV0ZXNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Git/BDLUCY-CodeFirst-Crudv2/BDLUCY-CodeFirst-Crud/Views/Incidencias/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5jaWRlbmNpYXNcRGV0YWlscy5jc2h0bWw=
+[C:/Git/BDLUCY-CodeFirst-Crudv2/BDLUCY-CodeFirst-Crud/Views/Paquetes/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFxdWV0ZXNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Git/BDLUCY-CodeFirst-Crudv2/BDLUCY-CodeFirst-Crud/Views/Incidencias/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5jaWRlbmNpYXNcRWRpdC5jc2h0bWw=
+[C:/Git/BDLUCY-CodeFirst-Crudv2/BDLUCY-CodeFirst-Crud/Views/Paquetes/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFxdWV0ZXNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Git/BDLUCY-CodeFirst-Crudv2/BDLUCY-CodeFirst-Crud/Views/Incidencias/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5jaWRlbmNpYXNcSW5kZXguY3NodG1s
+[C:/Git/BDLUCY-CodeFirst-Crudv2/BDLUCY-CodeFirst-Crud/Views/Paquetes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFxdWV0ZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Git/BDLUCY-CodeFirst-Crudv2/BDLUCY-CodeFirst-Crud/Views/Productoes/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9lc1xDcmVhdGUuY3NodG1s
+[C:/Git/BDLUCY-CodeFirst-Crudv2/BDLUCY-CodeFirst-Crud/Views/Rcompra/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmNvbXByYVxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Git/BDLUCY-CodeFirst-Crudv2/BDLUCY-CodeFirst-Crud/Views/Productoes/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9lc1xEZWxldGUuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Git/BDLUCY-CodeFirst-Crudv2/BDLUCY-CodeFirst-Crud/Views/Productoes/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9lc1xEZXRhaWxzLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Git/BDLUCY-CodeFirst-Crudv2/BDLUCY-CodeFirst-Crud/Views/Productoes/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9lc1xFZGl0LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Git/BDLUCY-CodeFirst-Crudv2/BDLUCY-CodeFirst-Crud/Views/Productoes/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9lc1xJbmRleC5jc2h0bWw=
+[C:/Git/BDLUCY-CodeFirst-Crudv2/BDLUCY-CodeFirst-Crud/Views/Rcompra/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmNvbXByYVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Git/BDLUCY-CodeFirst-Crudv2/BDLUCY-CodeFirst-Crud/Views/Shared/Error.cshtml]
@@ -71,24 +79,24 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Git/BDLUCY-CodeFirst-Crudv2/BDLUCY-CodeFirst-Crud/Views/Subcategorias/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3ViY2F0ZWdvcmlhc1xDcmVhdGUuY3NodG1s
+[C:/Git/BDLUCY-CodeFirst-Crudv2/BDLUCY-CodeFirst-Crud/Views/Usuarios/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Git/BDLUCY-CodeFirst-Crudv2/BDLUCY-CodeFirst-Crud/Views/Subcategorias/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3ViY2F0ZWdvcmlhc1xEZWxldGUuY3NodG1s
+[C:/Git/BDLUCY-CodeFirst-Crudv2/BDLUCY-CodeFirst-Crud/Views/Usuarios/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Git/BDLUCY-CodeFirst-Crudv2/BDLUCY-CodeFirst-Crud/Views/Subcategorias/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3ViY2F0ZWdvcmlhc1xEZXRhaWxzLmNzaHRtbA==
+[C:/Git/BDLUCY-CodeFirst-Crudv2/BDLUCY-CodeFirst-Crud/Views/Usuarios/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Git/BDLUCY-CodeFirst-Crudv2/BDLUCY-CodeFirst-Crud/Views/Subcategorias/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3ViY2F0ZWdvcmlhc1xFZGl0LmNzaHRtbA==
+[C:/Git/BDLUCY-CodeFirst-Crudv2/BDLUCY-CodeFirst-Crud/Views/Usuarios/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Git/BDLUCY-CodeFirst-Crudv2/BDLUCY-CodeFirst-Crud/Views/Subcategorias/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3ViY2F0ZWdvcmlhc1xJbmRleC5jc2h0bWw=
+[C:/Git/BDLUCY-CodeFirst-Crudv2/BDLUCY-CodeFirst-Crud/Views/Usuarios/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Git/BDLUCY-CodeFirst-Crudv2/BDLUCY-CodeFirst-Crud/Views/_ViewImports.cshtml]
