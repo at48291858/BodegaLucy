@@ -10,18 +10,22 @@ namespace BDLUCY_CodeFirst_Crud.Models
         public int Codigo_Cliente { get; set; }
         //---------------------
         [Column(TypeName = "nvarchar(25)")]
+        [Required(ErrorMessage = "El campo es obligatorio")]
         public string Nombre_Cliente { get; set; } = "";
         //---------------------
         [Column(TypeName = "nvarchar(20)")]
+        [Required(ErrorMessage = "El campo es obligatorio")]
         public string Apellido_Paterno_Cliente { get; set; } = "";
         //---------------------
         [Column(TypeName = "nvarchar(20)")]
+        [Required(ErrorMessage = "El campo es obligatorio")]
         public string Apellido_Materno_Cliente { get; set; } = "";
         //---------------------
         [Column(TypeName = "nvarchar(3)")]
         public string Tipo_Documento_Cliente { get; set; } = "";
         //---------------------
         [Column(TypeName = "nvarchar(13)")]
+        [Required(ErrorMessage = "El campo es obligatorio")]
         public string Documento_Cliente { get; set; } = "";
     }
 }
