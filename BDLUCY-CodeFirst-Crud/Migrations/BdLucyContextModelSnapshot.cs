@@ -323,10 +323,6 @@ namespace BDLUCY_CodeFirst_Crud.Migrations
                     b.Property<int>("Codigo_Producto")
                         .HasColumnType("int");
 
-                    b.Property<string>("Descripcion_Oferta")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(100)");
-
                     b.Property<float>("Descuento_Oferta")
                         .HasColumnType("real");
 

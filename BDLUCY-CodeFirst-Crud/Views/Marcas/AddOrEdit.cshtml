@@ -1,0 +1,40 @@
+﻿@model BDLUCY_CodeFirst_Crud.Models.Marca
+
+@{
+    Layout = null;
+}
+
+<div id="something" class="row">
+    <div class="col-md-12">
+        <form asp-action="AddOrEdit" asp-route-id="@Model.Codigo_Marca" onsubmit="return jQueryAjaxPost(this);">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Codigo_Marca" />
+            <div class="form-group">
+                <label asp-for="Codigo_Empresa" class="control-label">Empresa</label>
+                <select asp-for="Codigo_Empresa" class="form-control" asp-items="ViewBag.Codigo_Empresa">
+                    <option selected>Seleccionar opción</option>
+                </select>
+                <span asp-validation-for="Codigo_Empresa" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <label asp-for="Nombre_Marca" class="control-label">Nombre Marca</label>
+                <input asp-for="Nombre_Marca" class="form-control" />
+                <span asp-validation-for="Nombre_Marca" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <label asp-for="Descripcion_Marca" class="control-label">Descripción</label>
+                <input asp-for="Descripcion_Marca" class="form-control" />
+                <span asp-validation-for="Descripcion_Marca" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <div class="d-grid gap-2">
+                    <input type="submit" value="Submit" class="btn btn-primary" />
+                </div>
+            </div>
+            <br />
+        </form>
+    </div>
+</div>

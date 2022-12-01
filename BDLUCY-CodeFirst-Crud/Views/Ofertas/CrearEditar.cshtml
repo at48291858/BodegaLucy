@@ -1,0 +1,80 @@
+﻿@model BDLUCY_CodeFirst_Crud.Models.Oferta
+@{
+    ViewData["Title"] = "CrearEditar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>CrearEditar</h1>
+
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#CEmodal">
+    Probar Modal
+</button>
+
+
+<div class="p-4 border rounded bg-light">
+    <table id="tablaCE" class="table table-bordered table-responsive-xl">
+        <thead class="thead-dark">
+            <tr class="table-info">
+                <th>Producto</th>
+                <th>Stock de oferta</th>
+                <th>Precio</th>
+                <th>Descuento</th>
+                <th>Fecha de inicio</th>
+                <th>Fecha final</th>
+                <th>Opciones</th>
+            </tr>
+        </thead>
+
+    </table>
+
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="CEmodal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Oferta</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row p-3 border-0">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                </div>
+                <div class="form-row" style="padding-top:14px;">
+                    <div class="form-group col-md-6">
+                        <label>Producto</label>
+                        <select asp-for="Codigo_Producto" class="form-control"
+                        asp-items="@(new SelectList(ViewBag.productos))">
+                        </select>                                                     
+                        <span asp-validation-for="Codigo_Producto" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label>Fecha inicial</label>
+                        <input asp-for="Fecha_Inicio_Oferta" class="form-control" type="date"/>
+                        <span asp-validation-for="Fecha_Inicio_Oferta" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label>Fecha Final</label>
+                        <input asp-for="Fecha_Final_Oferta" class="form-control" type="date" />
+                        <span asp-validation-for="Fecha_Final_Oferta" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label>Descuento</label>
+                        <input asp-for="Descuento_Oferta" class="form-control" placeholder="-/S." />
+                        <span asp-validation-for="Descuento_Oferta" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label>Cantidad</label>
+                        <input asp-for="Cantidad_Oferta" class="form-control" placeholder="Cantidad" />
+                        <span asp-validation-for="Cantidad_Oferta" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-success">Guardar</button>
+            </div>
+        </div>
+    </div>
+</div>
