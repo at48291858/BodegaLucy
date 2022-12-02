@@ -8,221 +8,221 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = BDLUCY_CodeFirst_Crud
 build_property.RootNamespace = BDLUCY_CodeFirst_Crud
-build_property.ProjectDir = C:\Users\usuario\Documents\ProjectBodegaLucy\BodegaLucy\BDLUCY-CodeFirst-Crud\
+build_property.ProjectDir = C:\BodegaLucy-main\BDLUCY-CodeFirst-Crud\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\usuario\Documents\ProjectBodegaLucy\BodegaLucy\BDLUCY-CodeFirst-Crud
+build_property.MSBuildProjectDirectory = C:\BodegaLucy-main\BDLUCY-CodeFirst-Crud
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/usuario/Documents/ProjectBodegaLucy/BodegaLucy/BDLUCY-CodeFirst-Crud/Views/Categorias/AddOrEdit.cshtml]
+[C:/BodegaLucy-main/BDLUCY-CodeFirst-Crud/Views/Categorias/AddOrEdit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhc1xBZGRPckVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/usuario/Documents/ProjectBodegaLucy/BodegaLucy/BDLUCY-CodeFirst-Crud/Views/Categorias/Create.cshtml]
+[C:/BodegaLucy-main/BDLUCY-CodeFirst-Crud/Views/Categorias/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/usuario/Documents/ProjectBodegaLucy/BodegaLucy/BDLUCY-CodeFirst-Crud/Views/Categorias/Delete.cshtml]
+[C:/BodegaLucy-main/BDLUCY-CodeFirst-Crud/Views/Categorias/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/usuario/Documents/ProjectBodegaLucy/BodegaLucy/BDLUCY-CodeFirst-Crud/Views/Categorias/Details.cshtml]
+[C:/BodegaLucy-main/BDLUCY-CodeFirst-Crud/Views/Categorias/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/usuario/Documents/ProjectBodegaLucy/BodegaLucy/BDLUCY-CodeFirst-Crud/Views/Categorias/Edit.cshtml]
+[C:/BodegaLucy-main/BDLUCY-CodeFirst-Crud/Views/Categorias/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/usuario/Documents/ProjectBodegaLucy/BodegaLucy/BDLUCY-CodeFirst-Crud/Views/Categorias/Index.cshtml]
+[C:/BodegaLucy-main/BDLUCY-CodeFirst-Crud/Views/Categorias/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/usuario/Documents/ProjectBodegaLucy/BodegaLucy/BDLUCY-CodeFirst-Crud/Views/Categorias/_ViewAll.cshtml]
+[C:/BodegaLucy-main/BDLUCY-CodeFirst-Crud/Views/Categorias/_ViewAll.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhc1xfVmlld0FsbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/usuario/Documents/ProjectBodegaLucy/BodegaLucy/BDLUCY-CodeFirst-Crud/Views/Empresas/AddOrEdit.cshtml]
+[C:/BodegaLucy-main/BDLUCY-CodeFirst-Crud/Views/Empresas/AddOrEdit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wcmVzYXNcQWRkT3JFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/usuario/Documents/ProjectBodegaLucy/BodegaLucy/BDLUCY-CodeFirst-Crud/Views/Empresas/Create.cshtml]
+[C:/BodegaLucy-main/BDLUCY-CodeFirst-Crud/Views/Empresas/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wcmVzYXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/usuario/Documents/ProjectBodegaLucy/BodegaLucy/BDLUCY-CodeFirst-Crud/Views/Empresas/Delete.cshtml]
+[C:/BodegaLucy-main/BDLUCY-CodeFirst-Crud/Views/Empresas/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wcmVzYXNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/usuario/Documents/ProjectBodegaLucy/BodegaLucy/BDLUCY-CodeFirst-Crud/Views/Empresas/Details.cshtml]
+[C:/BodegaLucy-main/BDLUCY-CodeFirst-Crud/Views/Empresas/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wcmVzYXNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/usuario/Documents/ProjectBodegaLucy/BodegaLucy/BDLUCY-CodeFirst-Crud/Views/Empresas/Edit.cshtml]
+[C:/BodegaLucy-main/BDLUCY-CodeFirst-Crud/Views/Empresas/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wcmVzYXNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/usuario/Documents/ProjectBodegaLucy/BodegaLucy/BDLUCY-CodeFirst-Crud/Views/Empresas/Index.cshtml]
+[C:/BodegaLucy-main/BDLUCY-CodeFirst-Crud/Views/Empresas/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wcmVzYXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/usuario/Documents/ProjectBodegaLucy/BodegaLucy/BDLUCY-CodeFirst-Crud/Views/Empresas/_ViewAll.cshtml]
+[C:/BodegaLucy-main/BDLUCY-CodeFirst-Crud/Views/Empresas/_ViewAll.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wcmVzYXNcX1ZpZXdBbGwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/usuario/Documents/ProjectBodegaLucy/BodegaLucy/BDLUCY-CodeFirst-Crud/Views/Home/Index.cshtml]
+[C:/BodegaLucy-main/BDLUCY-CodeFirst-Crud/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/usuario/Documents/ProjectBodegaLucy/BodegaLucy/BDLUCY-CodeFirst-Crud/Views/Home/Privacy.cshtml]
+[C:/BodegaLucy-main/BDLUCY-CodeFirst-Crud/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/usuario/Documents/ProjectBodegaLucy/BodegaLucy/BDLUCY-CodeFirst-Crud/Views/Incidencias/Create.cshtml]
+[C:/BodegaLucy-main/BDLUCY-CodeFirst-Crud/Views/Incidencias/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5jaWRlbmNpYXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/usuario/Documents/ProjectBodegaLucy/BodegaLucy/BDLUCY-CodeFirst-Crud/Views/Incidencias/Delete.cshtml]
+[C:/BodegaLucy-main/BDLUCY-CodeFirst-Crud/Views/Incidencias/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5jaWRlbmNpYXNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/usuario/Documents/ProjectBodegaLucy/BodegaLucy/BDLUCY-CodeFirst-Crud/Views/Incidencias/Details.cshtml]
+[C:/BodegaLucy-main/BDLUCY-CodeFirst-Crud/Views/Incidencias/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5jaWRlbmNpYXNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/usuario/Documents/ProjectBodegaLucy/BodegaLucy/BDLUCY-CodeFirst-Crud/Views/Incidencias/Edit.cshtml]
+[C:/BodegaLucy-main/BDLUCY-CodeFirst-Crud/Views/Incidencias/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5jaWRlbmNpYXNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/usuario/Documents/ProjectBodegaLucy/BodegaLucy/BDLUCY-CodeFirst-Crud/Views/Incidencias/Index.cshtml]
+[C:/BodegaLucy-main/BDLUCY-CodeFirst-Crud/Views/Incidencias/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5jaWRlbmNpYXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/usuario/Documents/ProjectBodegaLucy/BodegaLucy/BDLUCY-CodeFirst-Crud/Views/Marcas/AddOrEdit.cshtml]
+[C:/BodegaLucy-main/BDLUCY-CodeFirst-Crud/Views/Marcas/AddOrEdit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFyY2FzXEFkZE9yRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/usuario/Documents/ProjectBodegaLucy/BodegaLucy/BDLUCY-CodeFirst-Crud/Views/Marcas/Create.cshtml]
+[C:/BodegaLucy-main/BDLUCY-CodeFirst-Crud/Views/Marcas/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFyY2FzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/usuario/Documents/ProjectBodegaLucy/BodegaLucy/BDLUCY-CodeFirst-Crud/Views/Marcas/Delete.cshtml]
+[C:/BodegaLucy-main/BDLUCY-CodeFirst-Crud/Views/Marcas/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFyY2FzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/usuario/Documents/ProjectBodegaLucy/BodegaLucy/BDLUCY-CodeFirst-Crud/Views/Marcas/Details.cshtml]
+[C:/BodegaLucy-main/BDLUCY-CodeFirst-Crud/Views/Marcas/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFyY2FzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/usuario/Documents/ProjectBodegaLucy/BodegaLucy/BDLUCY-CodeFirst-Crud/Views/Marcas/Edit.cshtml]
+[C:/BodegaLucy-main/BDLUCY-CodeFirst-Crud/Views/Marcas/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFyY2FzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/usuario/Documents/ProjectBodegaLucy/BodegaLucy/BDLUCY-CodeFirst-Crud/Views/Marcas/Index.cshtml]
+[C:/BodegaLucy-main/BDLUCY-CodeFirst-Crud/Views/Marcas/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFyY2FzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/usuario/Documents/ProjectBodegaLucy/BodegaLucy/BDLUCY-CodeFirst-Crud/Views/Marcas/_ViewAll.cshtml]
+[C:/BodegaLucy-main/BDLUCY-CodeFirst-Crud/Views/Marcas/_ViewAll.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFyY2FzXF9WaWV3QWxsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/usuario/Documents/ProjectBodegaLucy/BodegaLucy/BDLUCY-CodeFirst-Crud/Views/Presentacions/AddOrEdit.cshtml]
+[C:/BodegaLucy-main/BDLUCY-CodeFirst-Crud/Views/Presentacions/AddOrEdit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJlc2VudGFjaW9uc1xBZGRPckVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/usuario/Documents/ProjectBodegaLucy/BodegaLucy/BDLUCY-CodeFirst-Crud/Views/Presentacions/Create.cshtml]
+[C:/BodegaLucy-main/BDLUCY-CodeFirst-Crud/Views/Presentacions/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJlc2VudGFjaW9uc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/usuario/Documents/ProjectBodegaLucy/BodegaLucy/BDLUCY-CodeFirst-Crud/Views/Presentacions/Delete.cshtml]
+[C:/BodegaLucy-main/BDLUCY-CodeFirst-Crud/Views/Presentacions/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJlc2VudGFjaW9uc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/usuario/Documents/ProjectBodegaLucy/BodegaLucy/BDLUCY-CodeFirst-Crud/Views/Presentacions/Details.cshtml]
+[C:/BodegaLucy-main/BDLUCY-CodeFirst-Crud/Views/Presentacions/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJlc2VudGFjaW9uc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/usuario/Documents/ProjectBodegaLucy/BodegaLucy/BDLUCY-CodeFirst-Crud/Views/Presentacions/Edit.cshtml]
+[C:/BodegaLucy-main/BDLUCY-CodeFirst-Crud/Views/Presentacions/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJlc2VudGFjaW9uc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/usuario/Documents/ProjectBodegaLucy/BodegaLucy/BDLUCY-CodeFirst-Crud/Views/Presentacions/Index.cshtml]
+[C:/BodegaLucy-main/BDLUCY-CodeFirst-Crud/Views/Presentacions/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJlc2VudGFjaW9uc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/usuario/Documents/ProjectBodegaLucy/BodegaLucy/BDLUCY-CodeFirst-Crud/Views/Presentacions/_ViewAll.cshtml]
+[C:/BodegaLucy-main/BDLUCY-CodeFirst-Crud/Views/Presentacions/_ViewAll.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJlc2VudGFjaW9uc1xfVmlld0FsbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/usuario/Documents/ProjectBodegaLucy/BodegaLucy/BDLUCY-CodeFirst-Crud/Views/Productoes/Create.cshtml]
+[C:/BodegaLucy-main/BDLUCY-CodeFirst-Crud/Views/Productoes/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9lc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/usuario/Documents/ProjectBodegaLucy/BodegaLucy/BDLUCY-CodeFirst-Crud/Views/Productoes/Delete.cshtml]
+[C:/BodegaLucy-main/BDLUCY-CodeFirst-Crud/Views/Productoes/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9lc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/usuario/Documents/ProjectBodegaLucy/BodegaLucy/BDLUCY-CodeFirst-Crud/Views/Productoes/Details.cshtml]
+[C:/BodegaLucy-main/BDLUCY-CodeFirst-Crud/Views/Productoes/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9lc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/usuario/Documents/ProjectBodegaLucy/BodegaLucy/BDLUCY-CodeFirst-Crud/Views/Productoes/Edit.cshtml]
+[C:/BodegaLucy-main/BDLUCY-CodeFirst-Crud/Views/Productoes/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9lc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/usuario/Documents/ProjectBodegaLucy/BodegaLucy/BDLUCY-CodeFirst-Crud/Views/Productoes/Index.cshtml]
+[C:/BodegaLucy-main/BDLUCY-CodeFirst-Crud/Views/Productoes/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9lc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/usuario/Documents/ProjectBodegaLucy/BodegaLucy/BDLUCY-CodeFirst-Crud/Views/Shared/Error.cshtml]
+[C:/BodegaLucy-main/BDLUCY-CodeFirst-Crud/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/usuario/Documents/ProjectBodegaLucy/BodegaLucy/BDLUCY-CodeFirst-Crud/Views/Shared/_Layout3.cshtml]
+[C:/BodegaLucy-main/BDLUCY-CodeFirst-Crud/Views/Shared/_Layout3.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/usuario/Documents/ProjectBodegaLucy/BodegaLucy/BDLUCY-CodeFirst-Crud/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/BodegaLucy-main/BDLUCY-CodeFirst-Crud/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/usuario/Documents/ProjectBodegaLucy/BodegaLucy/BDLUCY-CodeFirst-Crud/Views/Subcategorias/AddOrEdit.cshtml]
+[C:/BodegaLucy-main/BDLUCY-CodeFirst-Crud/Views/Subcategorias/AddOrEdit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3ViY2F0ZWdvcmlhc1xBZGRPckVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/usuario/Documents/ProjectBodegaLucy/BodegaLucy/BDLUCY-CodeFirst-Crud/Views/Subcategorias/Create.cshtml]
+[C:/BodegaLucy-main/BDLUCY-CodeFirst-Crud/Views/Subcategorias/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3ViY2F0ZWdvcmlhc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/usuario/Documents/ProjectBodegaLucy/BodegaLucy/BDLUCY-CodeFirst-Crud/Views/Subcategorias/Delete.cshtml]
+[C:/BodegaLucy-main/BDLUCY-CodeFirst-Crud/Views/Subcategorias/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3ViY2F0ZWdvcmlhc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/usuario/Documents/ProjectBodegaLucy/BodegaLucy/BDLUCY-CodeFirst-Crud/Views/Subcategorias/Details.cshtml]
+[C:/BodegaLucy-main/BDLUCY-CodeFirst-Crud/Views/Subcategorias/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3ViY2F0ZWdvcmlhc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/usuario/Documents/ProjectBodegaLucy/BodegaLucy/BDLUCY-CodeFirst-Crud/Views/Subcategorias/Edit.cshtml]
+[C:/BodegaLucy-main/BDLUCY-CodeFirst-Crud/Views/Subcategorias/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3ViY2F0ZWdvcmlhc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/usuario/Documents/ProjectBodegaLucy/BodegaLucy/BDLUCY-CodeFirst-Crud/Views/Subcategorias/Index.cshtml]
+[C:/BodegaLucy-main/BDLUCY-CodeFirst-Crud/Views/Subcategorias/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3ViY2F0ZWdvcmlhc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/usuario/Documents/ProjectBodegaLucy/BodegaLucy/BDLUCY-CodeFirst-Crud/Views/Subcategorias/_ViewAll.cshtml]
+[C:/BodegaLucy-main/BDLUCY-CodeFirst-Crud/Views/Subcategorias/_ViewAll.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3ViY2F0ZWdvcmlhc1xfVmlld0FsbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/usuario/Documents/ProjectBodegaLucy/BodegaLucy/BDLUCY-CodeFirst-Crud/Views/_ViewImports.cshtml]
+[C:/BodegaLucy-main/BDLUCY-CodeFirst-Crud/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/usuario/Documents/ProjectBodegaLucy/BodegaLucy/BDLUCY-CodeFirst-Crud/Views/_ViewStart.cshtml]
+[C:/BodegaLucy-main/BDLUCY-CodeFirst-Crud/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/usuario/Documents/ProjectBodegaLucy/BodegaLucy/BDLUCY-CodeFirst-Crud/Views/Shared/_Layout.cshtml]
+[C:/BodegaLucy-main/BDLUCY-CodeFirst-Crud/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-ya60tmzxyo
