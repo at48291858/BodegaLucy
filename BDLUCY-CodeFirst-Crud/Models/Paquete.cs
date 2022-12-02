@@ -20,5 +20,9 @@ namespace BDLUCY_CodeFirst_Crud.Models
         [Column(TypeName = "nvarchar(70)")]
         public string Descripcion_Paquete { get; set; } = "";
         //----------------------------------------------
+
+        public virtual List<Detalle_Compra> Detalle_Compras { get; set; } = new List<Detalle_Compra>();
+
+
     }
 }

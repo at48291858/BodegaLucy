@@ -44,7 +44,7 @@ namespace BDLUCY_CodeFirst_Crud.Migrations
 
                     b.HasKey("Codigo_Categoria");
 
-                    b.ToTable("Categorias");
+                    b.ToTable("Categorias", (string)null);
                 });
 
             modelBuilder.Entity("BDLUCY_CodeFirst_Crud.Models.Cliente", b =>
@@ -77,7 +77,7 @@ namespace BDLUCY_CodeFirst_Crud.Migrations
 
                     b.HasKey("Codigo_Cliente");
 
-                    b.ToTable("Clientes");
+                    b.ToTable("Clientes", (string)null);
                 });
 
             modelBuilder.Entity("BDLUCY_CodeFirst_Crud.Models.Compra", b =>
@@ -124,7 +124,7 @@ namespace BDLUCY_CodeFirst_Crud.Migrations
 
                     b.HasIndex("Codigo_Usuario");
 
-                    b.ToTable("Compras");
+                    b.ToTable("Compras", (string)null);
                 });
 
             modelBuilder.Entity("BDLUCY_CodeFirst_Crud.Models.Detalle_Compra", b =>
@@ -156,7 +156,7 @@ namespace BDLUCY_CodeFirst_Crud.Migrations
 
                     b.HasIndex("Codigo_Paquete");
 
-                    b.ToTable("Detalle_Compras");
+                    b.ToTable("Detalle_Compras", (string)null);
                 });
 
             modelBuilder.Entity("BDLUCY_CodeFirst_Crud.Models.Detalle_Venta", b =>
@@ -188,7 +188,7 @@ namespace BDLUCY_CodeFirst_Crud.Migrations
 
                     b.HasIndex("Codigo_Venta");
 
-                    b.ToTable("detalle_Ventas");
+                    b.ToTable("detalle_Ventas", (string)null);
                 });
 
             modelBuilder.Entity("BDLUCY_CodeFirst_Crud.Models.Distribuidor", b =>
@@ -228,7 +228,7 @@ namespace BDLUCY_CodeFirst_Crud.Migrations
 
                     b.HasKey("Codigo_Distribuidor");
 
-                    b.ToTable("Distribuidors");
+                    b.ToTable("Distribuidors", (string)null);
                 });
 
             modelBuilder.Entity("BDLUCY_CodeFirst_Crud.Models.Empresa", b =>
@@ -250,7 +250,7 @@ namespace BDLUCY_CodeFirst_Crud.Migrations
 
                     b.HasKey("Codigo_Empresa");
 
-                    b.ToTable("Empresas");
+                    b.ToTable("Empresas", (string)null);
                 });
 
             modelBuilder.Entity("BDLUCY_CodeFirst_Crud.Models.Incidencia", b =>
@@ -279,7 +279,7 @@ namespace BDLUCY_CodeFirst_Crud.Migrations
 
                     b.HasIndex("Codigo_Producto");
 
-                    b.ToTable("Incidencias");
+                    b.ToTable("Incidencias", (string)null);
                 });
 
             modelBuilder.Entity("BDLUCY_CodeFirst_Crud.Models.Marca", b =>
@@ -306,7 +306,7 @@ namespace BDLUCY_CodeFirst_Crud.Migrations
 
                     b.HasIndex("Codigo_Empresa");
 
-                    b.ToTable("Marcas");
+                    b.ToTable("Marcas", (string)null);
                 });
 
             modelBuilder.Entity("BDLUCY_CodeFirst_Crud.Models.Oferta", b =>
@@ -340,7 +340,7 @@ namespace BDLUCY_CodeFirst_Crud.Migrations
 
                     b.HasIndex("Codigo_Producto");
 
-                    b.ToTable("Ofertas");
+                    b.ToTable("Ofertas", (string)null);
                 });
 
             modelBuilder.Entity("BDLUCY_CodeFirst_Crud.Models.Paquete", b =>
@@ -368,7 +368,7 @@ namespace BDLUCY_CodeFirst_Crud.Migrations
 
                     b.HasKey("Codigo_Paquete");
 
-                    b.ToTable("Paquetes");
+                    b.ToTable("Paquetes", (string)null);
                 });
 
             modelBuilder.Entity("BDLUCY_CodeFirst_Crud.Models.Presentacion", b =>
@@ -391,7 +391,7 @@ namespace BDLUCY_CodeFirst_Crud.Migrations
 
                     b.HasKey("Codigo_Presentacion");
 
-                    b.ToTable("Presentacions");
+                    b.ToTable("Presentacions", (string)null);
                 });
 
             modelBuilder.Entity("BDLUCY_CodeFirst_Crud.Models.Producto", b =>
@@ -446,7 +446,7 @@ namespace BDLUCY_CodeFirst_Crud.Migrations
 
                     b.HasIndex("Codigo_Subcategoria");
 
-                    b.ToTable("Productos");
+                    b.ToTable("Productos", (string)null);
                 });
 
             modelBuilder.Entity("BDLUCY_CodeFirst_Crud.Models.Subcategoria", b =>
@@ -476,7 +476,7 @@ namespace BDLUCY_CodeFirst_Crud.Migrations
 
                     b.HasIndex("Codigo_Categoria");
 
-                    b.ToTable("Subcategorias");
+                    b.ToTable("Subcategorias", (string)null);
                 });
 
             modelBuilder.Entity("BDLUCY_CodeFirst_Crud.Models.Usuario", b =>
@@ -536,7 +536,7 @@ namespace BDLUCY_CodeFirst_Crud.Migrations
 
                     b.HasKey("Codigo_Usuario");
 
-                    b.ToTable("Usuarios");
+                    b.ToTable("Usuarios", (string)null);
                 });
 
             modelBuilder.Entity("BDLUCY_CodeFirst_Crud.Models.Venta", b =>
@@ -588,7 +588,7 @@ namespace BDLUCY_CodeFirst_Crud.Migrations
 
                     b.HasIndex("Codigo_Usuario");
 
-                    b.ToTable("Ventas");
+                    b.ToTable("Ventas", (string)null);
                 });
 
             modelBuilder.Entity("BDLUCY_CodeFirst_Crud.Models.Compra", b =>

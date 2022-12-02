@@ -1,0 +1,83 @@
+﻿@model IEnumerable<BDLUCY_CodeFirst_Crud.Models.Compra>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Listado de compras</h1>
+
+<p>
+    <a asp-action="Create"class="btn btn-primary text-white">Registrar compra</a>
+</p>
+<table class="table" >
+    <thead  class="text-white" style="background-color:#fe9f8b;">
+        <tr>
+            <th style="font-family:'Calibri';">
+                Fecha
+            </th>
+            <th style="font-family:'Calibri';">
+                Comprobante
+            </th>
+            <th style="font-family:'Calibri';">
+                Serie
+            </th>
+            <th style="font-family:'Calibri';">
+                Numero
+            </th>
+            <th style="font-family:'Calibri';">
+                IGV
+            </th>
+            <th style="font-family:'Calibri';">
+                Subtotal
+            </th>
+            <th style="font-family:'Calibri';">
+                Total
+            </th>
+            <th style="font-family:'Calibri';">
+                Usuario
+            </th>
+            <th style="font-family:'Calibri';">
+                Distribuidor
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fecha_Compra)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tipo_Comprobante)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Serie_Comprobante_Compra)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Numero_Comprobante_Compra)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IGV_Compra)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Subtotal_Compra)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Total_Compra)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.usuario.Codigo_Usuario)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.distribuidor.Codigo_Distribuidor)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Codigo_Compra">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.Codigo_Compra">Detalles</a> |
+                <a asp-action="Delete" asp-route-id="@item.Codigo_Compra">Eliminar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

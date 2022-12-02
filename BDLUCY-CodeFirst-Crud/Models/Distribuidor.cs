@@ -13,7 +13,7 @@ namespace BDLUCY_CodeFirst_Crud.Models
         public string Razon_Social_Distribuidor { get; set; } = "";
         //----------------------------------------------
         [Column(TypeName = "nvarchar(11)")]
-        public char RUC_Distribuidor { get; set; }
+        public string RUC_Distribuidor { get; set; } = "";
         //----------------------------------------------
         [Column(TypeName = "nvarchar(150)")]
         public string Direccion_Distribuidor { get; set; } = "";

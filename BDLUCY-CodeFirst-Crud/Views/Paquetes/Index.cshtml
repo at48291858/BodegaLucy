@@ -1,0 +1,55 @@
+﻿@model IEnumerable<BDLUCY_CodeFirst_Crud.Models.Paquete>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary text-white">Agregar paquete</a>
+</p>
+<table class="table">
+    <thead class="text-white" style="background-color:#fe9f8b;">
+        <tr>
+            <th style="font-family:'Calibri';">
+                Nombre paquete
+            </th>
+            <th style="font-family:'Calibri';">
+                Cantidad por paquete
+            </th>
+            <th style="font-family:'Calibri';">
+                Contenido por paquete
+            </th>
+            <th style="font-family:'Calibri';">
+                Descripción
+            </th>
+            <th style="font-family:'Calibri';">
+                Opciones
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre_Paquete)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cantidad_Por_Paquete)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Contenido_Por_Unidad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descripcion_Paquete)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Codigo_Paquete">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.Codigo_Paquete">Detalles</a> |
+                <a asp-action="Delete" asp-route-id="@item.Codigo_Paquete">Borrar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

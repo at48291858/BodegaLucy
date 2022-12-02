@@ -39,10 +39,6 @@ namespace BDLUCY_CodeFirst_Crud.Models
         [ForeignKey("Codigo_Distribuidor")]             //ForeingKey
         public Distribuidor? distribuidor { get; set; }
 
-        //---------------------------- NUEVO -------------------------------------
-        //---------------------------- NUEVO -------------------------------------
-        //---------------------------- NUEVO -------------------------------------
-        //public List<Detalle_Compra> Detalle_Compras { get; set; }
-        //----------------------------------------------
+        public virtual List<Detalle_Compra> Detalle_Compras { get; set; } = new List<Detalle_Compra>();
     }
 }

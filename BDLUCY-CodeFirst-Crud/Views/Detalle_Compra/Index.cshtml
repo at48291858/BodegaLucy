@@ -1,0 +1,59 @@
+﻿@model IEnumerable<BDLUCY_CodeFirst_Crud.Models.Detalle_Compra>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Cantidad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Precio_Unitario)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Importe_Detalle_Compra)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.compra)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.paquete)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cantidad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Precio_Unitario)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Importe_Detalle_Compra)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.compra.Codigo_Compra)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.paquete.Codigo_Paquete)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Codigo_Detalle_Compra">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Codigo_Detalle_Compra">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Codigo_Detalle_Compra">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
