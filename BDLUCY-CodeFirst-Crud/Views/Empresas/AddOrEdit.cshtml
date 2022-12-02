@@ -1,0 +1,32 @@
+﻿@model BDLUCY_CodeFirst_Crud.Models.Empresa
+
+@{
+    Layout = null;
+}
+
+<div id="something" class="row">
+    <div class="col-md-12">
+        <form asp-action="AddOrEdit" asp-route-id="@Model.Codigo_Empresa" onsubmit="return jQueryAjaxPost(this);">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Codigo_Empresa" />
+            <div class="form-group">
+                <label asp-for="Nombre_Empresa" class="control-label">Nombre Empresa</label>
+                <input asp-for="Nombre_Empresa" class="form-control" />
+                <span asp-validation-for="Nombre_Empresa" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <label asp-for="Descripcion_Empresa" class="control-label">Descripción</label>
+                <input asp-for="Descripcion_Empresa" class="form-control" />
+                <span asp-validation-for="Descripcion_Empresa" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <div class="d-grid gap-2">
+                    <input type="submit" value="Submit" class="btn btn-primary" />
+                </div>
+            </div>
+            <br />
+        </form>
+    </div>
+</div>

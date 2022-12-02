@@ -1,62 +1,15 @@
 ﻿@model IEnumerable<BDLUCY_CodeFirst_Crud.Models.Oferta>
+
 @{
     ViewData["Title"] = "Index";
 }
 
-<h1>Ofertas</h1>
-<br />
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-    Launch static backdrop modal
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                ...
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Understood</button>
-            </div>
-        </div>
-    </div>
+<div id="view-all">
+    @await Html.PartialAsync("_ViewAll", Model)
 </div>
 
-<table class="table table-bordered">
-    <thead>
-        <tr>
-            <th>Producto</th>
-            <th>Stock de oferta</th>
-            <th>Precio</th>
-            <th>Descuento</th>
-            <th>Fecha de inicio</th>
-            <th>Fecha final</th>
-            <th>Opciones</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
-           <tr>
-               <td>@item.producto.Nombre_Producto</td>
-               <td>@item.Cantidad_Oferta</td>
-               <td>@item.producto.Precio_Venta_Producto</td>
-               <td>@item.Descuento_Oferta</td>
-               <td>@item.Fecha_Inicio_Oferta</td>
-               <td>@item.Fecha_Final_Oferta</td>
-               <td>
-                   <a asp-action="Editar" asp-route-id="@item.Codigo_Oferta">Editar</a>
-                   <a asp-action="Eliminar" asp-route-id="@item.Codigo_Oferta">Eliminar</a>
-               </td>
-           </tr>
-        }
-    </tbody>
-</table>
-
+@section Scripts{
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

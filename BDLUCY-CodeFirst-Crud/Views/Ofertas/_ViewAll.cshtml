@@ -1,0 +1,63 @@
+﻿@model IEnumerable<BDLUCY_CodeFirst_Crud.Models.Oferta>
+
+<style>
+    .table-responsive {
+        max-height: 500px;
+        overflow: scroll;
+    }
+</style>
+<div class="row mt-4 bg-white">
+    <div class="container pl-0 pr-0">
+        <div class="row pt-0 pl-0 pr-0 ml-0 mr-0" style="background-color:#fe9f8b;">
+            <h1 class="display-6 text-white">Ofertas</h1>
+        </div>
+        <div class="row mt-3 pl-0 pr-0">
+            <div class="col-md-9">
+                <form asp-controller="Ofertas" asp-action="Index" class="d-flex">
+                    <div class="input-group mb-3">
+                        <input type="text" name="buscar" class="form-control" placeholder="Buscar" />
+                        <button class="btn btn-outline-dark" type="submit" value="Buscar" id="button-addon2">Buscar</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-3 d-md-flex justify-content-md-end">
+                <p>
+                    <a onclick="showInPopup('@Url.Action("AddOrEdit","Ofertas",null,Context.Request.Scheme)','Nueva Oferta')" class="btn btn-primary text-white"> Agregar Oferta </a>
+                </p>
+            </div>
+        </div>
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover">
+                <thead class="text-white" style="background-color:#fe9f8b;">
+                    <tr>
+                        <th style="font-family:'Calibri';">Producto</th>
+                        <th style="font-family:'Calibri';">Stock de oferta</th>
+                        <th style="font-family:'Calibri';">Precio</th>
+                        <th style="font-family:'Calibri';">Descuento</th>
+                        <th style="font-family:'Calibri';">Fecha inicial</th>
+                        <th style="font-family:'Calibri';">Fecha final</th>
+                        <th style="font-family:'Calibri';">Opciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td style="font-family:'Calibri';">@Html.DisplayFor(modelItem => item.producto.Nombre_Producto)</td>
+                            <td style="font-family:'Calibri';">@Html.DisplayFor(modelItem => item.Cantidad_Oferta)</td>
+                            <td style="font-family:'Calibri';">S/@Html.DisplayFor(modelItem => item.producto.Precio_Venta_Producto)</td>
+                            <td style="font-family:'Calibri';">-S/@Html.DisplayFor(modelItem => item.Descuento_Oferta)</td>
+                            <td style="font-family:'Calibri';">@Html.DisplayFor(modelItem => item.Fecha_Inicio_Oferta)</td>
+                            <td style="font-family:'Calibri';">@Html.DisplayFor(modelItem => item.Fecha_Final_Oferta)</td>
+                            <td>
+                                <div>
+                                    <a onclick="showInPopup('@Url.Action("AddOrEdit","Ofertas",new {id=item.Codigo_Oferta},Context.Request.Scheme)','Editar Oferta')" class="btn btn-warning text-white">Editar</a>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

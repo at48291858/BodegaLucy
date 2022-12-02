@@ -6,23 +6,33 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using BDLUCY_CodeFirst_Crud.Models;
+using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.Extensions.Hosting;
 
 namespace BDLUCY_CodeFirst_Crud.Controllers
 {
     public class ProductoesController : Controller
     {
         private readonly BdLucyContext _context;
-
-        public ProductoesController(BdLucyContext context)
+        private readonly IWebHostEnvironment _environment;
+        public ProductoesController(BdLucyContext context, IWebHostEnvironment environment)
         {
             _context = context;
+            _environment = environment;
         }
 
         // GET: Productoes
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string buscar)
         {
-            var bdLucyContext = _context.Productos.Include(p => p.marca).Include(p => p.presentacion).Include(p => p.subcategoria);
-            return View(await bdLucyContext.ToListAsync());
+            var productos = from producto in _context.Productos.Include(p => p.marca).Include(p => p.presentacion).Include(p => p.subcategoria)
+                            select producto;
+            if (!String.IsNullOrEmpty(buscar))
+            {
+                productos = productos.Where(p => p.Codigo_De_Barra!.Contains(buscar) || p.Nombre_Producto!.Contains(buscar) || p.marca.Nombre_Marca!.Contains(buscar)
+                || p.presentacion.Nombre_Presentacion!.Contains(buscar) || p.subcategoria.Nombre_Subcategoria!.Contains(buscar));
+            }
+
+            return View(await productos.ToListAsync());
         }
 
         // GET: Productoes/Details/5
@@ -64,6 +74,16 @@ namespace BDLUCY_CodeFirst_Crud.Controllers
         {
             if (ModelState.IsValid)
             {
+                //Save image to wwwroot/image
+                /*string wwwRootPath = _environment.WebRootPath;
+                string fileName = Path.GetFileNameWithoutExtension(producto.ArchivoImagen.FileName);
+                string extension = Path.GetExtension(producto.ArchivoImagen.FileName);
+                producto.NombreImage = fileName = fileName + DateTime.Now.ToString("yymmssfff") + extension;
+                string path = Path.Combine(wwwRootPath + "/Image/", fileName);
+                using (var fileStream = new FileStream(path, FileMode.Create))
+                {
+                    await producto.ArchivoImagen.CopyToAsync(fileStream);
+                }*/
                 _context.Add(producto);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -83,6 +103,7 @@ namespace BDLUCY_CodeFirst_Crud.Controllers
             }
 
             var producto = await _context.Productos.FindAsync(id);
+
             if (producto == null)
             {
                 return NotFound();
@@ -109,6 +130,16 @@ namespace BDLUCY_CodeFirst_Crud.Controllers
             {
                 try
                 {
+                    //Save image to wwwroot/image
+                    /*string wwwRootPath = _environment.WebRootPath;
+                    string fileName = Path.GetFileNameWithoutExtension(producto.ArchivoImagen.FileName);
+                    string extension = Path.GetExtension(producto.ArchivoImagen.FileName);
+                    producto.NombreImage = fileName;
+                    string path = Path.Combine(wwwRootPath + "/Image/", fileName);
+                    using (var fileStream = new FileStream(path, FileMode.Create))
+                    {
+                        await producto.ArchivoImagen.CopyToAsync(fileStream);
+                    }*/
                     _context.Update(producto);
                     await _context.SaveChangesAsync();
                 }

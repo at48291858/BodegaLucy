@@ -1,0 +1,54 @@
+﻿@model BDLUCY_CodeFirst_Crud.Models.Oferta
+
+@{
+    Layout = null;
+}
+
+<div id="something" class="row">
+    <div class="col-md-12">
+        <form asp-action="AddOrEdit" asp-route-id="@Model.Codigo_Oferta" onsubmit="return jQueryAjaxPost(this);">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Codigo_Oferta" />
+            <div class="form-group">
+                <label asp-for="Codigo_Producto" class="control-label">Producto</label>
+                <select asp-for="Codigo_Producto" class="form-control" asp-items="ViewBag.Codigo_Producto">
+                    <option selected>Seleccionar producto</option>
+                </select>
+                <span asp-validation-for="Codigo_Producto" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <label asp-for="Cantidad_Oferta" class="control-label">Stock de oferta</label>
+                <input asp-for="Cantidad_Oferta" class="form-control" />
+                <span asp-validation-for="Cantidad_Oferta" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <label asp-for="Descuento_Oferta" class="control-label">Descuento</label>
+                <input asp-for="Descuento_Oferta" class="form-control" placeholder="-S/." />
+                <span asp-validation-for="Descuento_Oferta" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <label asp-for="Fecha_Inicio_Oferta" class="control-label">Fecha inicial</label>
+                <input asp-for="Fecha_Inicio_Oferta" class="form-control" type="date" />
+                <span asp-validation-for="Fecha_Inicio_Oferta" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <label asp-for="Fecha_Final_Oferta" class="control-label">Fecha final</label>
+                <input asp-for="Fecha_Final_Oferta" class="form-control" type="date" />
+
+                <span asp-validation-for="Fecha_Final_Oferta" class="text-danger"></span>
+            </div>
+            <br />
+            <br />
+            <div class="form-group">
+                <div class="d-grid gap-2">
+                    <input type="submit" value="Submit" class="btn btn-primary" />
+                </div>
+            </div>
+            <br />
+        </form>
+    </div>
+</div>

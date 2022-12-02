@@ -1,0 +1,47 @@
+﻿@model BDLUCY_CodeFirst_Crud.Models.Subcategoria
+
+@{
+    Layout = null;
+}
+
+<div id="something" class="row">
+    <div class="col-md-12">
+        <form asp-action="AddOrEdit" asp-route-id="@Model.Codigo_Subcategoria" onsubmit="return jQueryAjaxPost(this);">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Codigo_Subcategoria" />
+            <div class="form-group">
+                <label asp-for="Codigo_Categoria" class="control-label">Categoria</label>
+                <select asp-for="Codigo_Categoria" class="form-control" asp-items="ViewBag.Codigo_Categoria">
+                    <option selected>Seleccionar opción</option>
+                </select>
+                <span asp-validation-for="Codigo_Categoria" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <label asp-for="Nombre_Subcategoria" class="control-label">Subcategoria</label>
+                <input asp-for="Nombre_Subcategoria" class="form-control" />
+                <span asp-validation-for="Nombre_Subcategoria" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <label asp-for="Descripcion_Subcategoria" class="control-label">Descripción</label>
+                <input asp-for="Descripcion_Subcategoria" class="form-control" />
+                <span asp-validation-for="Descripcion_Subcategoria" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-check form-switch">
+                <label class="form-check-label" for="flexSwitchCheckChecked">
+                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked"
+                           asp-for="Estado_Subcategoria">Estado
+                </label>
+            </div>
+            <br />
+            <div class="form-group">
+                <div class="d-grid gap-2">
+                    <input type="submit" value="Submit" class="btn btn-primary" />
+                </div>
+            </div>
+            <br />
+        </form>
+    </div>
+</div>

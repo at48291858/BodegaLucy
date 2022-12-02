@@ -1,0 +1,91 @@
+﻿@model IEnumerable<BDLUCY_CodeFirst_Crud.Models.Categoria>
+
+<style>
+    .table-responsive {
+        max-height: 350px;
+        overflow: scroll;
+    }
+</style>
+<div class="row mt-4 bg-white">
+    <div class="container pl-0 pr-0">
+        <div class="row pt-0 pl-0 pr-0 ml-0 mr-0" style="background-color:#fe9f8b;">
+            <h1 class="display-6 text-white">Categorias</h1>
+        </div>
+        <div class="row mt-3 pl-0 pr-0">
+            <div class="col-md-9">
+                <form asp-controller="Categorias" asp-action="Index" class="d-flex">
+                    <div class="input-group mb-3">
+                        <input type="text" name="buscar" class="form-control" placeholder="Buscar" />
+                        <!--<button type="submit" value="Buscar" class="btn btn-dark">Submit</button>-->
+                        <button class="btn btn-outline-dark" type="submit" value="Buscar" id="button-addon2">Buscar</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-3 d-md-flex justify-content-md-end">
+                <p>
+                    <a onclick="showInPopup('@Url.Action("AddOrEdit","Categorias",null,Context.Request.Scheme)','Nueva Categoria')" class="btn btn-primary text-white"> Agregar Categoria</a>
+                </p>
+            </div>
+        </div>
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover">
+                <thead class="text-white" style="background-color:#fe9f8b;">
+                    <tr>
+                        <th style="font-family:'Calibri';">Item</th>
+                        <th style="font-family:'Calibri';">Nombre Categoria</th>
+                        <th style="font-family:'Calibri';">Descripcion Categoria</th>
+                        <th style="font-family:'Calibri';">Estado</th>
+                        <th style="font-family:'Calibri';">Opciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <hr />
+                    @{
+                        int c = 0;
+                        bool estado = false;
+                        string pestado = "";
+                        string color = "";
+                    }
+                    @foreach (var item in Model)
+                    {
+                        if (item.Codigo_Categoria != null)
+                        {
+                            c++;
+                        }
+                        estado = item.Estado_Categoria;
+                        if (estado == true)
+                        {
+                            pestado = "VIGENTE";
+                            color = "#4BAC4E";
+                        }
+                        else
+                        {
+                            pestado = "NO VIGENTE";
+                            color = "#979797";
+                        }
+
+                        <tr>
+                            <td>@c</td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Nombre_Categoria)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Descripcion_Categoria)
+                            </td>
+                            <td><span class="badge rounded-pill" style="font-family:'Calibri'; background-color:@color;">@pestado</span></td>
+                            <td>
+                                <div>
+                                    <a onclick="showInPopup('@Url.Action("AddOrEdit","Categorias",new {id=item.Codigo_Categoria},Context.Request.Scheme)','Editar Categoria')" class="btn btn-warning text-white">Editar</a>
+                                    <!--<form asp-action="Delete" asp-route-id="@item.Codigo_Categoria" onsubmit="return jQueryAjaxDelete(this)" class="d-inline">
+                                        <input type="hidden" asp-for="@item.Codigo_Categoria" />
+                                        <input type="submit" value="Delete" class="btn btn-danger" />
+                                    </form>-->
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

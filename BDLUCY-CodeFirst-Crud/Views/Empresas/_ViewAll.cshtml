@@ -1,0 +1,69 @@
+﻿@model IEnumerable<BDLUCY_CodeFirst_Crud.Models.Empresa>
+
+<style>
+    .table-responsive {
+        max-height: 500px;
+        overflow: scroll;
+    }
+</style>
+<div class="row mt-4 bg-white">
+    <div class="container pl-0 pr-0">
+        <div class="row pt-0 pl-0 pr-0 ml-0 mr-0" style="background-color:#fe9f8b;">
+            <h1 class="display-6 text-white">Empresas</h1>
+        </div>
+        <div class="row mt-3 pl-0 pr-0">
+            <div class="col-md-9">
+                <form asp-controller="Empresas" asp-action="Index" class="d-flex">
+                    <div class="input-group mb-3">
+                        <input type="text" name="buscar" class="form-control" placeholder="Buscar" />
+                        <button class="btn btn-outline-dark" type="submit" value="Buscar" id="button-addon2">Buscar</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-3 d-md-flex justify-content-md-end">
+                <p>
+                    <a onclick="showInPopup('@Url.Action("AddOrEdit","Empresas",null,Context.Request.Scheme)','Nueva Empresa')" class="btn btn-primary text-white"> Agregar Empresa</a>
+                </p>
+            </div>
+        </div>
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover">
+                <thead class="text-white" style="background-color:#fe9f8b;">
+                    <tr>
+                        <th style="font-family:'Calibri';">Item</th>
+                        <th style="font-family:'Calibri';">Empresa</th>
+                        <th style="font-family:'Calibri';">Descripcion</th>
+                        <th style="font-family:'Calibri';">Opciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <hr />
+                    @{
+                        int c = 0;
+                    }
+                    @foreach (var item in Model)
+                    {
+                        if (item.Codigo_Empresa != null)
+                        {
+                            c++;
+                        }
+                        <tr>
+                            <td>@c</td>
+                            <td style="font-family:'Calibri';">@Html.DisplayFor(modelItem => item.Nombre_Empresa)</td>
+                            <td style="font-family:'Calibri';">@Html.DisplayFor(modelItem => item.Descripcion_Empresa)</td>
+                            <td>
+                                <div>
+                                    <a onclick="showInPopup('@Url.Action("AddOrEdit","Empresas",new {id=item.Codigo_Empresa},Context.Request.Scheme)','Editar Empresa')" class="btn btn-warning text-white">Editar</a>
+                                    <form asp-action="Delete" asp-route-id="@item.Codigo_Empresa" onsubmit="return jQueryAjaxDelete(this)" class="d-inline">
+                                        <input type="hidden" asp-for="@item.Codigo_Empresa" />
+                                        <input type="submit" value="Delete" class="btn btn-danger" />
+                                    </form>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

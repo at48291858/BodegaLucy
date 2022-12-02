@@ -1,0 +1,54 @@
+﻿@model BDLUCY_CodeFirst_Crud.Models.Cliente
+
+@{
+    Layout = null;
+}
+
+<div id="something" class="row">
+    <div class="col-md-12">
+        <form asp-action="AddOrEdit" asp-route-id="@Model.Codigo_Cliente" onsubmit="return jQueryAjaxPost(this);">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Codigo_Cliente" />
+            <div class="form-group">
+                <label asp-for="Nombre_Cliente" class="control-label">Nombres</label>
+                <input asp-for="Nombre_Cliente" class="form-control" />
+                <span asp-validation-for="Nombre_Cliente" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <label asp-for="Apellido_Paterno_Cliente" class="control-label">Apellido Paterno</label>
+                <input asp-for="Apellido_Paterno_Cliente" class="form-control"/>
+                <span asp-validation-for="Apellido_Paterno_Cliente" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <label asp-for="Apellido_Materno_Cliente" class="control-label">Apellido Materno</label>
+                <input asp-for="Apellido_Materno_Cliente" class="form-control" />
+                <span asp-validation-for="Apellido_Materno_Cliente" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <label asp-for="Tipo_Documento_Cliente" class="control-label">Tipo de Documento</label>
+                <select asp-for="Tipo_Documento_Cliente" class="form-control">
+                    <option selected>Seleccionar opción</option>
+                    <option value="DNI">DNI</option>
+                    <option value="RUC">RUC</option>
+                </select>
+                <span asp-validation-for="Tipo_Documento_Cliente" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <label asp-for="Documento_Cliente" class="control-label">NºDocumento</label>
+                <input asp-for="Documento_Cliente" class="form-control" />
+                <span asp-validation-for="Documento_Cliente" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <div class="d-grid gap-2">
+                    <input type="submit" value="Submit" class="btn btn-primary" />
+                </div>
+            </div>
+            <br />
+        </form>
+    </div>
+</div>

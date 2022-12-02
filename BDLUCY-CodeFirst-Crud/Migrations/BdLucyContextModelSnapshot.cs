@@ -323,6 +323,10 @@ namespace BDLUCY_CodeFirst_Crud.Migrations
                     b.Property<int>("Codigo_Producto")
                         .HasColumnType("int");
 
+                    b.Property<string>("Descripcion_Oferta")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(100)");
+
                     b.Property<float>("Descuento_Oferta")
                         .HasColumnType("real");
 
@@ -419,7 +423,7 @@ namespace BDLUCY_CodeFirst_Crud.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("NombreImage")
-                        .HasColumnType("nvarchar(80)");
+                        .HasColumnType("nvarchar(255)");
 
                     b.Property<string>("Nombre_Producto")
                         .IsRequired()

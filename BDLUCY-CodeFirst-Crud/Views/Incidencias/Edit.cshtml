@@ -4,46 +4,59 @@
     ViewData["Title"] = "Edit";
 }
 
-<h1>Edit</h1>
+<body>
+    <div class="row mt-4 bg-white">
+        <div class="container mb-0 pt-0 pl-0 pr-0">
+            <div class="row mb-0 pt-0 pl-0 pr-0" style="background-color:#fe9f8b;">
+                <h1 class="display-6 text-white">Editar Incidencia</h1>
+            </div>
+            <hr />
+            <div class="row">
+                <div class="col">
+                    <form asp-action="Edit">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <input type="hidden" asp-for="Codigo_Incidencia" />
+                        <div class="row">
+                            <div class="form-group col-6">
+                                <label asp-for="Codigo_Producto" class="control-label">Codigo del Producto</label>
+                                <select asp-for="Codigo_Producto" class="form-control" asp-items="ViewBag.Codigo_Producto"></select>
+                                <span asp-validation-for="Codigo_Producto" class="text-danger"></span>
+                            </div>
+                            <div class="form-group col-6">
+                                <label asp-for="Cantidad_Incidencia" class="control-label">Cantidad</label>
+                                <input asp-for="Cantidad_Incidencia" class="form-control" />
+                                <span asp-validation-for="Cantidad_Incidencia" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="row">
 
-<h4>Incidencia</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Edit">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="Codigo_Incidencia" />
-            <div class="form-group">
-                <label asp-for="Codigo_Producto" class="control-label"></label>
-                <select asp-for="Codigo_Producto" class="form-control" asp-items="ViewBag.Codigo_Producto"></select>
-                <span asp-validation-for="Codigo_Producto" class="text-danger"></span>
+                            <div class="form-group col-6">
+                                <label asp-for="Descripcion_Incidencia" class="control-label">Descripción</label>
+                                <input asp-for="Descripcion_Incidencia" class="form-control" />
+                                <span asp-validation-for="Descripcion_Incidencia" class="text-danger"></span>
+                            </div>
+                            <div class="form-group col-6">
+                                <label asp-for="Fecha_Incidencia" class="control-label">Fecha</label>
+                                <input asp-for="Fecha_Incidencia" class="form-control" />
+                                <span asp-validation-for="Fecha_Incidencia" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="form-group">
+                            <input type="submit" value="Save" class="btn btn-primary" />
+                            <a class="btn btn-warning" asp-action="Index" style="background-color:#ffa834; border:none; color:#fff;">Cancelar</a>
+                        </div>
+                        <br />
+                    </form>
+                </div>
             </div>
-            <div class="form-group">
-                <label asp-for="Descripcion_Incidencia" class="control-label"></label>
-                <input asp-for="Descripcion_Incidencia" class="form-control" />
-                <span asp-validation-for="Descripcion_Incidencia" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Cantidad_Incidencia" class="control-label"></label>
-                <input asp-for="Cantidad_Incidencia" class="form-control" />
-                <span asp-validation-for="Cantidad_Incidencia" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Fecha_Incidencia" class="control-label"></label>
-                <input asp-for="Fecha_Incidencia" class="form-control" />
-                <span asp-validation-for="Fecha_Incidencia" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
-            </div>
-        </form>
+        </div>
     </div>
-</div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+</body>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    }
