@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LAaMEquR7Pfvd7ZxhOYXOuDrE7jlnu0E0aiNyy88JC8sZDljKdJVdcTXKyEfJHTvWwzo2HRkKKizR1yqJfqwLA==",
+  "dgSpecHash": "GwFP3we/DKu/Q89Iwd8eCOqADYW4UcC9nK0BSodadPm91Atb3y+8vmgcktSqLuUN1VAmmswGRv0D/MkS2FC86g==",
   "success": true,
-  "projectFilePath": "C:\\Git\\BDLUCY-CodeFirst-Crudv2\\BDLUCY-CodeFirst-Crud\\BDLUCY-CodeFirst-Crud.csproj",
+  "projectFilePath": "C:\\BodegaLucy-main\\BDLUCY-CodeFirst-Crud\\BDLUCY-CodeFirst-Crud.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Manuel\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Manuel\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",

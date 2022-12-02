@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Git\\BDLUCY-CodeFirst-Crudv2\\BDLUCY-CodeFirst-Crud\\BDLUCY-CodeFirst-Crud.csproj": {}
+    "C:\\BodegaLucy-main\\BDLUCY-CodeFirst-Crud\\BDLUCY-CodeFirst-Crud.csproj": {}
   },
   "projects": {
-    "C:\\Git\\BDLUCY-CodeFirst-Crudv2\\BDLUCY-CodeFirst-Crud\\BDLUCY-CodeFirst-Crud.csproj": {
+    "C:\\BodegaLucy-main\\BDLUCY-CodeFirst-Crud\\BDLUCY-CodeFirst-Crud.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Git\\BDLUCY-CodeFirst-Crudv2\\BDLUCY-CodeFirst-Crud\\BDLUCY-CodeFirst-Crud.csproj",
+        "projectUniqueName": "C:\\BodegaLucy-main\\BDLUCY-CodeFirst-Crud\\BDLUCY-CodeFirst-Crud.csproj",
         "projectName": "BDLUCY-CodeFirst-Crud",
-        "projectPath": "C:\\Git\\BDLUCY-CodeFirst-Crudv2\\BDLUCY-CodeFirst-Crud\\BDLUCY-CodeFirst-Crud.csproj",
+        "projectPath": "C:\\BodegaLucy-main\\BDLUCY-CodeFirst-Crud\\BDLUCY-CodeFirst-Crud.csproj",
         "packagesPath": "C:\\Users\\Manuel\\.nuget\\packages\\",
-        "outputPath": "C:\\Git\\BDLUCY-CodeFirst-Crudv2\\BDLUCY-CodeFirst-Crud\\obj\\",
+        "outputPath": "C:\\BodegaLucy-main\\BDLUCY-CodeFirst-Crud\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
