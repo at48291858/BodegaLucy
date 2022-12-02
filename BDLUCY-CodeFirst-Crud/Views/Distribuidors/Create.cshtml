@@ -1,0 +1,63 @@
+﻿@model BDLUCY_CodeFirst_Crud.Models.Distribuidor
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Distribuidor</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Razon_Social_Distribuidor" class="control-label"></label>
+                <input asp-for="Razon_Social_Distribuidor" class="form-control" />
+                <span asp-validation-for="Razon_Social_Distribuidor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RUC_Distribuidor" class="control-label"></label>
+                <input asp-for="RUC_Distribuidor" class="form-control" />
+                <span asp-validation-for="RUC_Distribuidor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Direccion_Distribuidor" class="control-label"></label>
+                <input asp-for="Direccion_Distribuidor" class="form-control" />
+                <span asp-validation-for="Direccion_Distribuidor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Telefono_Distribuidor" class="control-label"></label>
+                <input asp-for="Telefono_Distribuidor" class="form-control" />
+                <span asp-validation-for="Telefono_Distribuidor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Nombre_Contacto" class="control-label"></label>
+                <input asp-for="Nombre_Contacto" class="form-control" />
+                <span asp-validation-for="Nombre_Contacto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Telefono_Contacto" class="control-label"></label>
+                <input asp-for="Telefono_Contacto" class="form-control" />
+                <span asp-validation-for="Telefono_Contacto" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Estado_Distribuidor" /> @Html.DisplayNameFor(model => model.Estado_Distribuidor)
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
