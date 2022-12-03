@@ -47,7 +47,7 @@
                 </div>
                 <ul class="sub-menu">
                     <li><a class="link_name" href="#">Ventas</a></li>
-                    <li><a href="#">Clientes</a></li>
+                    <li><a asp-area="" asp-controller="Clientes" asp-action="Index">Clientes</a></li>
                     <li><a href="#">Ofertas</a></li>
                     <li><a href="#">Realizar Ventas</a></li>
                     <li><a href="#">Reporte de Ventas</a></li>
@@ -63,8 +63,10 @@
                 </div>
                 <ul class="sub-menu">
                     <li><a class="link_name" href="#">Compras</a></li>
-                    <li><a href="#">Distribuidores</a></li>
-                    <li><a href="#">Realizar Compras</a></li>
+                    <li><a asp-area="" asp-controller="Paquetes" asp-action="Index">Paquetes</a></li>
+                    <li><a asp-area="" asp-controller="Distribuidors" asp-action="Index">Distribuidores</a></li>
+                    <li><a asp-area="" asp-controller="Rcompra" asp-action="Index">Realizar Compra</a></li>
+                    <li><a asp-area="" asp-controller="Detalle_Compra" asp-action="Index">Detalle Compras</a></li>
                     <li><a href="#">Reporte de Compras</a></li>
                 </ul>
             </li>

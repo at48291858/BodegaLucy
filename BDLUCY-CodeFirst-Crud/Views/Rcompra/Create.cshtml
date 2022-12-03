@@ -4,16 +4,13 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
+<h1>Registro de compra</h1>
 
-<h4>Compra</h4>
-<hr />
 <div class="row">
 
-
-
     <div class="col-md-9">
-
+        <h4>Añadir paquetes</h4>
+        <hr />
 
 
         <table id="tbpaquetes" class="table">
@@ -81,48 +78,52 @@
 
 
     <div class="col-md-3">
+
+        <h4>Detalle compra</h4>
+        <hr />
+
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="Fecha_Compra" class="control-label"></label>
+                <label >Fecha de compra</label>
                 <input asp-for="Fecha_Compra" class="form-control" />
                 <span asp-validation-for="Fecha_Compra" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Tipo_Comprobante" class="control-label"></label>
+                <label >Tipo de comprobante</label>
                 <input asp-for="Tipo_Comprobante" class="form-control" />
                 <span asp-validation-for="Tipo_Comprobante" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Serie_Comprobante_Compra" class="control-label"></label>
+                <label>Serie comprobante</label>
                 <input asp-for="Serie_Comprobante_Compra" class="form-control" />
                 <span asp-validation-for="Serie_Comprobante_Compra" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Numero_Comprobante_Compra" class="control-label"></label>
+                <label>Número de comprobante</label>
                 <input asp-for="Numero_Comprobante_Compra" class="form-control" />
                 <span asp-validation-for="Numero_Comprobante_Compra" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Codigo_Usuario" class="control-label"></label>
+                <label>Usuario</label>
                 <select asp-for="Codigo_Usuario" class="form-control" asp-items="ViewBag.Codigo_Usuario"></select>
             </div>
             <div class="form-group">
-                <label asp-for="Codigo_Distribuidor" class="control-label"></label>
+                <label>Distribuidor</label>
                 <select asp-for="Codigo_Distribuidor" class="form-control" asp-items="ViewBag.Codigo_Distribuidor"></select>
             </div>
             <div class="form-group">
-                <label asp-for="IGV_Compra" class="control-label"></label>
+                <label>IGV</label>
                 <input asp-for="IGV_Compra" class="form-control" />
                 <span asp-validation-for="IGV_Compra" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Subtotal_Compra" class="control-label"></label>
+                <label>Subtotal</label>
                 <input asp-for="Subtotal_Compra" class="form-control" />
                 <span asp-validation-for="Subtotal_Compra" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Total_Compra" class="control-label"></label>
+                <label>Total</label>
                 <input asp-for="Total_Compra" class="form-control" />
                 <span asp-validation-for="Total_Compra" class="text-danger"></span>
             </div>
