@@ -40,7 +40,7 @@
                 {
                     <tr>
                         <td>
-
+                            <select asp-for="Detalle_Compras[i].Codigo_Paquete" class="form-control" asp-items="ViewBag.Codigo_Paquete"></select>
                             @Html.EditorFor(x=> x.Detalle_Compras[i].Codigo_Paquete,new {htmlAttributes = new{ @class="form-control"} })
                             @*<input asp-for="@item.Codigo_Paquete" class="form-control" />*@
                         </td>

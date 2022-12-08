@@ -4,43 +4,55 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
+<h1>Añadir nuevo paquete</h1>
 
-<h4>Paquete</h4>
+<h4>Información</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="Nombre_Paquete" class="control-label"></label>
+                <th style="font-family:'Calibri';">
+                    Nombre paquete
+                </th>
                 <input asp-for="Nombre_Paquete" class="form-control" />
                 <span asp-validation-for="Nombre_Paquete" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Cantidad_Por_Paquete" class="control-label"></label>
+                <th style="font-family:'Calibri';">
+                    Cantidad por paquete
+                </th>
                 <input asp-for="Cantidad_Por_Paquete" class="form-control" />
                 <span asp-validation-for="Cantidad_Por_Paquete" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Contenido_Por_Unidad" class="control-label"></label>
+                <th style="font-family:'Calibri';">
+                    Contenido por paquete
+                </th>
                 <input asp-for="Contenido_Por_Unidad" class="form-control" />
                 <span asp-validation-for="Contenido_Por_Unidad" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Descripcion_Paquete" class="control-label"></label>
+                <th style="font-family:'Calibri';">
+                    Descripción
+                </th>
                 <input asp-for="Descripcion_Paquete" class="form-control" />
                 <span asp-validation-for="Descripcion_Paquete" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <br />
+                <a class="btn btn-danger" asp-action="Index">Cancelar</a>
+                <input type="submit" value="Agregar paquete" class="btn btn-primary" />
+                
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <br />
+    
 </div>
 
 @section Scripts {

@@ -34,10 +34,10 @@ namespace BDLUCY_CodeFirst_Crud.Models
         //ESTÁBLECEMOS LAS RELACIONES ENTRE CLASES
         //----------------------------------------------
         [ForeignKey("Codigo_Usuario")]                  //ForeingKey
-        public Usuario? usuario { get; set; }
+        public Usuario usuario { get; set; }
         //----------------------------------------------
         [ForeignKey("Codigo_Distribuidor")]             //ForeingKey
-        public Distribuidor? distribuidor { get; set; }
+        public Distribuidor distribuidor { get; set; }
 
         public virtual List<Detalle_Compra> Detalle_Compras { get; set; } = new List<Detalle_Compra>();
     }
